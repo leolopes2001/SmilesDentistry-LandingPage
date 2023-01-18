@@ -1,0 +1,106 @@
+{
+    "clinic_info": {
+        "name": "OdontoSorrisos",
+        "phone": "(37) 99119-7849",
+        "wpp_link": "https://agendaconsulta.com/"
+    },
+    "services": [
+        "Aparelho Dental",
+        "Implante Dentário",
+        "Prótese Dentária",
+        "Clareamento Dental",
+        "Harmonização Orofacial",
+        "Botox",
+        "Alinhador Invisível",
+        "Limpeza Dentária"
+    ],
+    "dentists": [
+        {
+            "name": "Dr. Robson",
+            "specialization": ""
+        },
+        {
+            "name": "Dra. Bárbara",
+            "specialization": "Ortodontista"
+        },
+        {
+            "name": "Dra. Márcia",
+            "specialization": "Endodontista"
+        },
+        {
+            "name": "Dr. Gilbert",
+            "specialization": "Clínico Geral"
+        }
+    ],
+    "navLinks": [
+        {
+            "id": "home",
+            "name": "Home"
+        },
+        {
+            "id": "services",
+            "name": "Tratamentos"
+        },
+        {
+            "id": "dentists",
+            "name": "Dentistas"
+        },
+        {
+            "id": "schedules",
+            "name": "Agendamentos"
+        },
+        {
+            "id": "howArrive",
+            "name": "Como chegar"
+        }
+    ],
+    "pacients_cases": [
+        {
+            "id": "img1",
+            "case": "Larissa Almeida - Aparelho Ortodôntico"
+        },
+        {
+            "id": "img2",
+            "case": "Marta Ribeiro - Prótese Móvel"
+        },
+        {
+            "id": "img3",
+            "case": "Maria Machado - Prótese Total Fixa"
+        },
+        {
+            "id": "img4",
+            "case": "Josefa da Silva - Prótese Total Fixa"
+        },
+        {
+            "id": "img5",
+            "case": "Maria Machado - Prótese Total Fixa"
+        }
+    ],
+    "reviwes": [
+        {
+            "img": "img1",
+            "text": "Wow. What a great experience with this copywriter. Muhammad Noman is a very talented copywriter. yesterday I got his first Email that was amazing...experience with him",
+            "name": "Esther Howard",
+            "work": "P. Desiger of (Amazon)"
+        },
+        {
+            "img": "img2",
+            "text": "Wow. What a great experience with this copywriter. Muhammad Noman is a very talented copywriter. yesterday I got his first Email that was amazing...experience with him",
+            "name": "Esther Howard",
+            "work": "P. Desiger of (Amazon)"
+        },
+        {
+            "img": "img3",
+            "text": "Wow. What a great experience with this copywriter. Muhammad Noman is a very talented copywriter. yesterday I got his first Email that was amazing...experience with him",
+            "name": "Esther Howard",
+            "work": "P. Desiger of (Amazon)"
+        }
+    ],
+    "contact_info": [
+        "27 Division St, New York",
+        "+154 4808 84082 4830",
+        "support@arvilax.com",
+        "Office Hours: 8AM - 5PM",
+        "Sunday - Wekend Day"
+    ]
+}
