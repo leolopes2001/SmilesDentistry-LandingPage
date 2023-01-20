@@ -10,7 +10,7 @@ export const HeaderStyled = styled.header`
   width: 100vw;
   height: ${convertToRem(105)};
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-
+  padding: 0 1rem;
   ${Container} {
     display: flex;
 
@@ -30,10 +30,22 @@ export const HeaderStyled = styled.header`
       img {
         position: relative;
         object-fit: cover;
-        /* left: -20px; */
         top: 14%;
         height: 105px;
         width: 80px;
+      }
+
+      @media (max-height: 800px) {
+        ${BaseTitle} {
+          font-size: 25px;
+        }
+      }
+
+      @media (max-height: 700px) {
+        img {
+          height: 90px;
+          width: 70px;
+        }
       }
     }
 
@@ -67,6 +79,17 @@ export const HeaderStyled = styled.header`
           background: #2ca2fb;
         }
       }
+
+      @media (max-height: 700px) {
+        margin-left: 2rem;
+      }
+      @media (max-height: 680px) {
+        > ${LinkStyled} {
+          font-size: 16px;
+        }
+        min-width: 580px;
+        margin-left: 2rem;
+      }
     }
 
     .contact_container {
@@ -91,14 +114,31 @@ export const HeaderStyled = styled.header`
         line-height: 26px;
         text-align: center;
         color: #ffffff;
+
+        @media (max-height: 680px) {
+          font-size: 16px;
+        }
       }
     }
 
     > ${LinkStyled} {
-      min-width: 204px;
-      max-width: 204px;
-      height: 65px;
+      min-width: 190px;
+      max-width: 190px;
+      height: 58px;
       background: #2ca2fb;
     }
+
+    @media (max-height: 700px) {
+      > ${LinkStyled} {
+        min-width: 180px;
+        max-width: 180px;
+        height: 46px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-height: 700px) {
+    height: ${convertToRem(80)};
   }
 `;

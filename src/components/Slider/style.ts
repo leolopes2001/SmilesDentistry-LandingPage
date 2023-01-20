@@ -47,11 +47,22 @@ const SliderWrapVariant = {
       :hover {
         filter: brightness(1.2);
       }
+
+      @media (max-height: 800px) {
+        transform: scale(0.9);
+      }
+
+      @media (max-height: 660px) {
+        transform: scale(0.8);
+      }
+      @media (max-height: 600px) {
+        transform: scale(0.7);
+      }
     }
 
     .prevButton {
       top: 45%;
-      left: 10%;
+      left: 8.7%;
 
       .arrow {
         position: absolute;
@@ -63,7 +74,7 @@ const SliderWrapVariant = {
 
     .nextButton {
       top: 45%;
-      right: 10%;
+      right: 8.7%;
 
       .arrow {
         position: absolute;

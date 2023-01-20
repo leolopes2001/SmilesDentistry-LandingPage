@@ -10,36 +10,36 @@ export const CardStyled = styled.div`
   inset: 0;
   display: flex;
   left: 50%;
-  transform: translateX(-50%) translateY(-25%);
+  transform: translateX(-50%) translateY(-22%);
   flex-direction: column;
   justify-content: flex-end;
-
   max-width: 852px;
 
   ${BaseTitle} {
-    height: 185px;
+    overflow: visible;
     text-align: center;
-    margin-bottom: 46px;
+    margin-bottom: 5%;
     position: relative;
     z-index: 9999999999;
 
     span {
       position: relative;
       z-index: 999999;
+      overflow: visible;
     }
     .title_style {
       position: absolute;
       z-index: 999;
       inset: 0;
-      top: 20px;
-
-      left: 2.4%;
-      transform: rotate(-0.5deg);
-
-      max-width: 333.59px;
-      min-width: 333.59px;
-      max-height: 63.65px;
-      min-height: 63.65px;
+      top: 16px;
+      object-fit: cover;
+      left: 0;
+      transform: rotate(1deg);
+      transform: translateX(10%);
+      max-width: 270px;
+      min-width: 270px;
+      max-height: 53px;
+      min-height: 53px;
     }
   }
 
@@ -51,7 +51,7 @@ export const CardStyled = styled.div`
     line-height: 32px;
     text-align: center;
     color: #ffffff;
-    margin-bottom: 65px;
+    margin-bottom: 5%;
   }
 
   div {
@@ -59,10 +59,46 @@ export const CardStyled = styled.div`
     justify-content: center;
     gap: 30px;
     ${LinkStyled}:nth-of-type(1) {
-      width: 204px;
+      width: 190px;
+      height: 58px;
+
+      @media (max-height: 700px) {
+        width: 156px;
+        height: 46px;
+      }
     }
     ${LinkStyled}:nth-of-type(2) {
-      width: 244px;
+      width: 224px;
+      height: 58px;
+
+      @media (max-height: 700px) {
+        width: 176px;
+        height: 46px;
+      }
+    }
+  }
+
+  @media (max-height: 700px) {
+    transform: translateX(-50%) translateY(-25%);
+
+    div {
+      gap: 15px;
+    }
+    ${BaseTitle} {
+      font-size: 48px;
+
+      .title_style {
+        top: 10px;
+        left: -0.4%;
+
+        max-width: 220px;
+        min-width: 220px;
+        max-height: 43px;
+        min-height: 43px;
+      }
+    }
+    p {
+      margin-bottom: 3%;
     }
   }
 `;

@@ -4,12 +4,20 @@ import convertToRem from "../../../utils/convertToRem";
 
 const LinkVariant = {
   primary: css`
-    border-radius: ${convertToRem(91)};
     font-weight: 700;
-    font-size: ${convertToRem(15)};
+    font-size: 12px;
+    color: ${({ theme }) => theme.colors.whiteFixed};
+    border-radius: ${convertToRem(91)};
     line-height: ${convertToRem(64)};
     text-transform: uppercase;
-    color: ${({ theme }) => theme.colors.whiteFixed};
+
+    @media (min-width: 1000px) {
+      font-size: ${convertToRem(15)};
+    }
+
+    @media (max-height: 700px) {
+      font-size: 14px;
+    }
   `,
   secondary: css`
     font-family: "Raleway";

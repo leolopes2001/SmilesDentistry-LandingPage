@@ -13,21 +13,24 @@ const TitleVariant = {
 
   title1: css`
     font-weight: 700;
-    font-size: 80px;
-    line-height: 105.5%;
+    font-size: 60px;
     letter-spacing: -0.01em;
     color: #ffffff;
   `,
 
   title2: css`
     font-weight: 600;
-    font-size: 55px;
+    font-size: 24px;
     line-height: 105.5%;
     letter-spacing: -0.01em;
     color: #000e29;
 
     span {
-      color: blue;
+      color: ${({theme}) => theme.colors.primary};
+    }
+
+    @media (min-width: 800px) {
+      font-size: 55px;
     }
   `,
 
