@@ -1,0 +1,43 @@
+/* .back1 {
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+
+  position: relative;
+  overflow: hidden;
+}
+.back1::after {
+  content: "";
+  background-color: #000e29;
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  opacity: 0.5;
+  height: 100vh;
+}
+
+.um {
+  object-fit: cover;
+  position: absolute;
+  bottom: -400px;
+  height: 600px;
+  z-index: 9999;
+  width: 100%;
+}
+.dois {
+  position: absolute;
+
+  top: 0;
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+
+  object-fit: cover;
+}
+
+.back2 {
+  height: 100vh;
+  width: 100%;
+
+  background-color: #fff;
+} */

@@ -1,4 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const ButtonVariant = {
+  home_slider: css`
+
+  `,
+};
 
 export const ButtonStyled = styled.button`
   display: inline-flex;

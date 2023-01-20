@@ -96,11 +96,18 @@
             "work": "P. Desiger of (Amazon)"
         }
     ],
-    "contact_info": [
-        "27 Division St, New York",
-        "+154 4808 84082 4830",
-        "support@arvilax.com",
-        "Office Hours: 8AM - 5PM",
-        "Sunday - Wekend Day"
-    ]
+    "footer_services": [],
+    "howArrive": {
+        "street": "Rua Godolfredo Gonçalves",
+        "number_room_neighborhood": "375 - Sala 01 - Centro",
+        "city": "Itaúna - MG",
+        "cep": "Cep: 35681-047"
+    },
+    "contact_info": {
+        "company": "agendaconsulta.com",
+        "phone": "(37) 99119-7849",
+        "email": "agendaconsulta@gmail.com",
+        "office_hours": "Horário de atendimento: 8h às 17h",
+        "days_of_work": "Segunda a Sábado"
+    }
 }

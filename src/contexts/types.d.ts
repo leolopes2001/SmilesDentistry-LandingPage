@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
 
-export interface IDefaultContextProps {
+export interface IDefaultProps {
   children: ReactNode;
 }
