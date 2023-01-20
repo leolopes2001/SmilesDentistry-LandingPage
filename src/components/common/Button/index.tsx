@@ -1,10 +1,11 @@
 import { IButtonProps } from "./Button";
 import { ButtonStyled } from "./style";
 
-
 const Button = ({ type = "button", children, ...rest }: IButtonProps) => {
   return (
-    <ButtonStyled></ButtonStyled>
+    <ButtonStyled type={type} {...rest}>
+      {children}
+    </ButtonStyled>
   );
 };
 

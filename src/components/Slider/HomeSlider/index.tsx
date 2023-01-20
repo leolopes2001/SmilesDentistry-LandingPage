@@ -20,7 +20,6 @@ const HomeSlider = () => {
     loop: true,
     slidesPerView: 1,
   };
-  const swiperRef = useRef<any>();
 
   return (
     <Slider variant="type1" settings={settings}>
@@ -44,23 +43,12 @@ const HomeSlider = () => {
       </Slide>
 
       <Container variant="big">
-        <button
-          className="prevButton"
-          onClick={() => {
-            console.log("clicou");
-            swiperRef.current?.slidePrev();
-          }}
-          ref={prevElRef}
-        >
+        <button className="prevButton" ref={prevElRef}>
           <HomeBtnSlider1 />
           <img src={Arrow} alt="Arrow" className="arrow" />
         </button>
 
-        <button
-          ref={nextElRef}
-          className="nextButton"
-          onClick={() => swiperRef.current?.slideNext()}
-        >
+        <button ref={nextElRef} className="nextButton">
           <HomeBtnSlider2 />
           <img src={Arrow} alt="Arrow" className="arrow" />
         </button>

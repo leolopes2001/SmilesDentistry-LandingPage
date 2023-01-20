@@ -43,7 +43,7 @@ export const SideBarStyled = styled.aside<{
       font-weight: 800;
       font-size: ${convertToRem(20)};
       line-height: ${convertToRem(23)};
-      color: ${({ theme }) => theme.colors.grey5};
+      /* color: ${({ theme }) => theme.colors.grey5}; */
     }
   }
   ${({ isSideBarOpen }) =>

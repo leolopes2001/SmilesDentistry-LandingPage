@@ -34,7 +34,6 @@ export const Container: StyledComponent<
   height: 100%;
   margin: 0 auto;
   padding: ${convertToRem(16)};
-  /* position: relative;  */
 
   ${({ variant }) => ContainerVariant[variant || "normal"]}
 `;

@@ -109,5 +109,12 @@
         "email": "agendaconsulta@gmail.com",
         "office_hours": "Horário de atendimento: 8h às 17h",
         "days_of_work": "Segunda a Sábado"
+    },
+    "social_media": {
+        "facebook": "",
+        "twitter": "",
+        "behance": "",
+        "youtube": "",
+        "linkedin": "   "
     }
 }

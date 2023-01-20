@@ -26,7 +26,7 @@ const TitleVariant = {
     color: #000e29;
 
     span {
-      color: ${({theme}) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.primary};
     }
 
     @media (min-width: 800px) {

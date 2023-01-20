@@ -5,7 +5,7 @@ import { BaseTitle } from "../../../components/common/Title/style";
 
 export const SectionStyled = styled.section`
   width: 100%;
-  height: 105vh;
+  /* height: 105vh;  */
   padding: 1rem;
   ${LinkStyled} {
     width: 135px;
@@ -42,6 +42,7 @@ export const SectionStyled = styled.section`
   }
 
   > .content_box {
+    margin-bottom: 2rem;
     
     .text_box {
       ${Text} {

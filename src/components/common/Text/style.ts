@@ -4,12 +4,12 @@ const TextVariant = {
   labelPage: css`
     position: relative;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 105.5%;
     letter-spacing: -0.02em;
     color: ${({ theme }) => theme.colors.secondary};
     padding-left: 17px;
- 
+
     ::after {
       content: "";
       width: 10px;
@@ -23,11 +23,12 @@ const TextVariant = {
     }
 
     @media (min-width: 800px) {
+      font-size: 16px;
     }
   `,
 };
 
-export const Text = styled.p<{variant: "labelPage"}>`
+export const Text = styled.p<{ variant: "labelPage" }>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
