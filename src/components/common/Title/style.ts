@@ -20,7 +20,7 @@ const TitleVariant = {
 
   title2: css`
     font-weight: 600;
-    font-size: 24px;
+    font-size: 38px;
     line-height: 105.5%;
     letter-spacing: -0.01em;
     color: #000e29;
@@ -36,10 +36,15 @@ const TitleVariant = {
 
   title3: css`
     font-weight: 600;
-    font-size: 55px;
+    font-size: 38px;
     line-height: 105.5%;
     letter-spacing: -0.01em;
     color: #ffffff;
+
+    @media (min-width: 800px) {
+      font-size: 55px;
+    }
+
   `,
 
   title4: css`

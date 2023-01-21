@@ -11,7 +11,7 @@ import { SliderProps } from ".";
 interface ISliderProps {
   settings: SliderProps;
   children: ReactNode;
-  variant: "type1";
+  variant: "type1" | "type3" | "type4";
 }
 
 const Slider = ({ variant, settings, children }: ISliderProps) => {

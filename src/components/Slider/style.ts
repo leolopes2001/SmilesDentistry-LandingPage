@@ -84,9 +84,85 @@ const SliderWrapVariant = {
       }
     }
   `,
+  type3: css`
+    .swiper {
+      width: 100%;
+      margin-top: 3rem;
+      padding: 2rem;
+      padding-bottom: 0;
+    }
+
+    .swiper-slide {
+      width: 366px;
+      height: 302px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      .up,
+      .down {
+        width: 366px;
+        height: 302px;
+        width: 100%;
+
+        img {
+          max-width: 366px;
+          max-height: 262px;
+          width: 100%;
+          min-width: 200px;
+          height: 90%;
+          border-radius: 20px;
+        }
+      }
+      .up {
+        transform: translateY(20px);
+      }
+      .down {
+        transform: translateY(-20px);
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+
+    @media (max-height: 780px) {
+      .swiper-slide {
+        /* width: 488px;
+        height: 382px; */
+        .up,
+        .down {
+          /* height: 292px; */
+          /* width: 100%; */
+          /* max-width: 288px; */
+        }
+      }
+    }
+  `,
+  type4: css`
+
+    .swiper {
+      width: 100%;
+    
+    }
+
+    .swiper-slide {
+      width: 418px;
+      height: 470px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+  `,
 };
 export const SliderWrap = styled.div<{
-  variant: "type1";
+  variant: "type1" | "type3" | "type4";
 }>`
+  min-width: 0;
   ${({ variant }) => SliderWrapVariant[variant]}
 `;

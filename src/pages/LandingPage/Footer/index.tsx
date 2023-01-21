@@ -1,10 +1,12 @@
 import { Container } from "../../../components/common/Container/style";
 import { FooterStyled } from "./style";
-import {social_media} from "../../../components-mock.json"
+import { social_media } from "../../../components-mock.json";
+import FooterBack from "../../../assets/svgs/background/footerBackNew.svg";
+
 const Footer = () => {
   return (
     <FooterStyled>
-      <Container variant="normal">
+      {/* <Container variant="normal">
             <div>
                 <div>
                     <img src="" alt="" />
@@ -40,7 +42,8 @@ const Footer = () => {
                 <p>© 2023 AgendaConsulta website. All Rights Reserved.</p>
                 <a href="#home">Voltar para Home</a>
             </div>
-      </Container>
+      </Container> */}
+      <img src={FooterBack} alt="" />
     </FooterStyled>
   );
 };
