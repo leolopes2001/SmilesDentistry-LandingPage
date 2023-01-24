@@ -11,28 +11,10 @@ export const Background = styled.div`
   .shape {
     object-fit: cover;
     position: absolute;
-    bottom: -400px;
+    bottom: -420px;
     height: 600px;
-    z-index: 9999;
+    z-index: 99;
     width: 100%;
-  }
-
-  .btn {
-    position: absolute;
-    top: 50%;
-    width: 400px;
-    height: 400px;
-    background-color: red;
-    z-index: 9999999;
-  }
-
-  .btn2 {
-    position: absolute;
-    top: 50%;
-    width: 400px;
-    height: 400px;
-    background-color: red;
-    z-index: 9999999;
-    left: 40%;
+    pointer-events: none;
   }
 `;

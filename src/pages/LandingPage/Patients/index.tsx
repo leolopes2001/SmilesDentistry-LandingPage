@@ -7,7 +7,6 @@ import Title from "../../../components/common/Title";
 import PatientsSlider from "../../../components/Slider/PatientsSlider";
 import { SectionStlyed } from "./style";
 
-
 import { ReactComponent as Car } from "../../../assets/svgs/icons/car.svg";
 import { ReactComponent as Life } from "../../../assets/svgs/icons/life.svg";
 import { ReactComponent as Home } from "../../../assets/svgs/icons/home.svg";
@@ -33,7 +32,7 @@ const Patients = () => {
       <Container variant="normal">
         <section>
           <Title variant="title2" tag="h4">
-            Get an Insurance Quote to get started!
+            Get an Insurance Quote <span>to get started!</span>
           </Title>
           <ul>
             <li className="card">
@@ -60,9 +59,9 @@ const Patients = () => {
         </section>
         <form action="">
           <h3>Car Insurance</h3>
-          <Input placeholder="Enter Name" />
-          <Input placeholder="Enter Mail" />
-          <Input placeholder="Car Insurance" />
+          <Input variant="patients" placeholder="Enter Name" />
+          <Input variant="patients" placeholder="Enter Mail" />
+          <Input variant="patients" placeholder="Car Insurance" />
           <textarea placeholder="Enter Message"></textarea>
           <Button variant="form_button" type="submit">
             Get a quote now

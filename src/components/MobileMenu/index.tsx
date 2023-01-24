@@ -1,25 +1,26 @@
 import { useCallback } from "react";
-// import { useSideBar } from "../../contexts/SideBarProvider";
-// import { MobileMenuStyled } from "./stlye";
+import { useSideBar } from "../../contexts/SideBarProvider";
+import { MobileMenuStyled } from "./style";
 
-// const MobileMenu = () => {
-//   const { isSideBarOpen, setIsSideBarOpen } = useSideBar();
 
-//   const handleMenuClick = useCallback(() => {
-//     setIsSideBarOpen((prev) => !prev);
-//   }, []);
+const MobileMenu = () => {
+  const { isSideBarOpen, setIsSideBarOpen } = useSideBar();
 
-//   return (
-//     <MobileMenuStyled
-//       isSideBarOpen={isSideBarOpen}
-//       onClick={handleMenuClick}
-//       className="mobile-menu"
-//     >
-//       <div className="line1 line-menu" />
-//       <div className="line2 line-menu" />
-//       <div className="line3 line-menu" />
-//     </MobileMenuStyled>
-//   );
-// };
+  const handleMenuClick = useCallback(() => {
+    setIsSideBarOpen((prev) => !prev);
+  }, []);
 
-export default {};
+  return (
+    <MobileMenuStyled
+      isSideBarOpen={isSideBarOpen}
+      onClick={handleMenuClick}
+      className="mobile-menu"
+    >
+      <div className="line1 line-menu" />
+      <div className="line2 line-menu" />
+      <div className="line3 line-menu" />
+    </MobileMenuStyled>
+  );
+};
+
+export default MobileMenu

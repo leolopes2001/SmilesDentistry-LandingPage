@@ -12,7 +12,7 @@ const LinkVariant = {
     text-transform: uppercase;
 
     @media (min-width: 1000px) {
-      font-size: ${convertToRem(15)};
+      font-size: ${convertToRem(14)};
     }
 
     @media (max-height: 700px) {

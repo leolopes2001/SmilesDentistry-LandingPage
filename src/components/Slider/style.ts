@@ -42,10 +42,19 @@ const SliderWrapVariant = {
       transition: all 300ms;
       background-color: transparent;
       position: absolute;
-      z-index: 9999;
+      z-index: 9999999999999;
+
+      transform: scale(0.7);
 
       :hover {
         filter: brightness(1.2);
+      }
+
+      @media (min-width: 1000px) {
+        transform: scale(0.8);
+      }
+      @media (min-width: 1200px) {
+        transform: scale(1);
       }
 
       @media (max-height: 800px) {
@@ -56,14 +65,14 @@ const SliderWrapVariant = {
         transform: scale(0.8);
       }
       @media (max-height: 600px) {
-        transform: scale(0.7);
+        transform: scale(0.8);
       }
     }
 
     .prevButton {
-      top: 45%;
-      left: 8.7%;
+      left: 20%;
 
+      top: 70%;
       .arrow {
         position: absolute;
         top: 55%;
@@ -73,15 +82,72 @@ const SliderWrapVariant = {
     }
 
     .nextButton {
-      top: 45%;
-      right: 8.7%;
-
+      /* top: 45%; */
+      /* right: 8.7%; */
+      right: 20%;
+      top: 70%;
       .arrow {
         position: absolute;
         top: 45%;
         left: 55%;
         transform: translate(-50%, -50%);
       }
+    }
+
+    @media (min-width: 800px) {
+      .prevButton {
+        top: 42%;
+        left: 8.7%;
+      }
+
+      .nextButton {
+        top: 42%;
+        right: 8.7%;
+      }
+    }
+
+    @media (min-width: 1000px) and (max-height: 780px) {
+      .prevButton {
+        top: 36%;
+      }
+      .nextButton {
+        top: 36%;
+      }
+    }
+    @media (min-width: 1000px) and (max-height: 640px) {
+      .prevButton {
+        top: 32%;
+        transform: scale(0.7);
+      }
+      .nextButton {
+        transform: scale(0.7);
+        top: 32%;
+      }
+    }
+  `,
+  type2: css`
+    width: 100%;
+    transform: translateY(-10%);
+    .swiper {
+      margin-top: 0rem 0;
+
+      width: 100%;
+      max-width: 350px;
+      padding: 3rem 0;
+      margin-bottom: 1rem;
+    }
+
+    .swiper-slide {
+      width: 309px;
+      height: 247px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
     }
   `,
   type3: css`
@@ -140,15 +206,14 @@ const SliderWrapVariant = {
     }
   `,
   type4: css`
-
     .swiper {
       width: 100%;
-    
+      padding-bottom: 4rem;
     }
 
     .swiper-slide {
-      width: 418px;
-      height: 470px;
+      width: 296px;
+      height: 306px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -159,9 +224,31 @@ const SliderWrapVariant = {
       display: none;
     }
   `,
+  type5: css`
+    .swiper {
+      width: 100%;
+
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      
+      .swiper-button-prev::after {
+        font-size: 40px;
+        transform: translateX(-13px);
+      }
+
+      .swiper-button-next::after {
+        font-size: 40px;
+        transform: translateX(13px);
+      }
+    }
+  `,
 };
 export const SliderWrap = styled.div<{
-  variant: "type1" | "type3" | "type4";
+  variant: "type1" | "type2" | "type3" | "type4" | "type5";
 }>`
   min-width: 0;
   ${({ variant }) => SliderWrapVariant[variant]}

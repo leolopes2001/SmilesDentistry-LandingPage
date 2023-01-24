@@ -12,8 +12,15 @@ export const SectionStyled = styled.section`
     height: 48px;
 
     @media (min-width: 1000px) {
-      width: 204px;
-      height: 58px;
+      font-size: 14px;
+      width: 184px;
+      height: 58.5px;
+    }
+
+    @media (min-width: 1200px) and (max-height: 750px) {
+      font-size: 12px;
+      width: 156px;
+      height: 49.8px;
     }
   }
 
@@ -23,10 +30,9 @@ export const SectionStyled = styled.section`
     font-weight: 600;
     font-size: 14px;
     line-height: 70px;
-
     text-align: center;
-
     color: #292930;
+
     @media (min-width: 800px) {
       line-height: 103px;
       font-size: 20px;
@@ -65,6 +71,10 @@ export const SectionStyled = styled.section`
           font-size: 15px;
           width: 450px;
         }
+
+        @media (min-width: 1200px) and (max-height: 750px) {
+          font-size: 14px;
+        }
       }
 
       ${BaseTitle} {
@@ -72,15 +82,37 @@ export const SectionStyled = styled.section`
         width: 287px;
         margin-bottom: 9px;
         @media (min-width: 800px) {
-          margin-bottom: 45px;
+          margin-bottom: 30px;
           height: 99px;
           width: 548px;
+        }
+
+        @media (min-width: 1200px) and (max-height: 750px) {
+          font-size: 45px;
+          margin-bottom: 15px;
         }
       }
     }
     .text_link_box {
       display: flex;
       gap: 0.5rem;
+
+      ${LinkStyled} {
+        width: 135px;
+        height: 48px;
+
+        @media (min-width: 1100px) {
+          font-size: 14px;
+          width: 152px;
+          height: 58.5px;
+        }
+
+        @media (min-width: 1200px) and (max-height: 750px) {
+          font-size: 12px;
+          width: 146px;
+          height: 49.8px;
+        }
+      }
     }
 
     .img_box {
@@ -89,11 +121,26 @@ export const SectionStyled = styled.section`
       justify-content: center;
       svg {
         margin-top: 1rem;
+        /* transform: scale(1.1); */
 
         display: flex;
         text-align: left;
         path {
           transform: translate(-12%, -10%);
+        }
+      }
+
+      @media (min-width: 1100px) {
+        img {
+          width: 450px;
+          margin-right: 3rem;
+        }
+      }
+
+      @media (min-width: 1200px) and (max-height: 800px) {
+        img {
+          width: 400px;
+          margin-right: 3rem;
         }
       }
     }

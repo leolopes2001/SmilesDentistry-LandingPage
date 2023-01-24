@@ -10,6 +10,11 @@ import { ReactComponent as Board2 } from "../../../assets/svgs/services/board2.s
 import { ReactComponent as Points } from "../../../assets/svgs/icons/points.svg";
 import Wpp from "../../../assets/svgs/icons/whatsapp.svg";
 import { SectionStyled } from "./style";
+import SerivesSlider from "../../../components/Slider/ServiceSlider";
+import ServiceCard from "../../../components/Slider/ServiceSlider/ServiceCard";
+
+import Back from "../../../assets/svgs/background/serviceTop.svg";
+import Back2 from "../../../assets/svgs/background/borderBottom.svg";
 
 const Services = () => {
   const [width] = useWindowSize();
@@ -24,7 +29,20 @@ const Services = () => {
             Tipos de tratamentos
           </Title>
         </div>
-        {width > 1200 ? <></> : <></>}
+        {width > 1200 ? (
+          <div className="list_services">
+            <ServiceCard />
+            <ServiceCard />
+            <ServiceCard />
+            <ServiceCard />
+            <ServiceCard />
+            <ServiceCard />
+            <ServiceCard />
+            <ServiceCard />
+          </div>
+        ) : (
+          <SerivesSlider />
+        )}
 
         <div className="info_box">
           <Board1 className="board1" />
@@ -45,9 +63,9 @@ const Services = () => {
             </Link>
           </div>
         </div>
+        <img src={Back2} alt="" className="boardBottom"/>
+        <img src={Back} alt="Background" className="boardTop" />
       </Container>
-
-      <img src={Background} alt="Background" />
     </SectionStyled>
   );
 };

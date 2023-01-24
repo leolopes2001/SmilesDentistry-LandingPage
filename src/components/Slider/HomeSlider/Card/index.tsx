@@ -8,7 +8,7 @@ const Card = () => {
     <CardStyled>
       <Title tag="h3" variant="title1">
         <span>Dentistas que cuidam do seu sorriso</span>
-        <img src={TitleStyleImg} alt="Title style" className="title_style" />
+        {/* <img src={TitleStyleImg} alt="Title style" className="title_style" /> */}
       </Title>
       <p>Clique para no botão abaixo para agendar uma avaliação</p>
       <div>

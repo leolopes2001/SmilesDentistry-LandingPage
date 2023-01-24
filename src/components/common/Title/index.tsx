@@ -6,7 +6,14 @@ export interface IBaseTitleProps {
   tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   className?: string;
   children: ReactNode;
-  variant: "logo" | "title1" | "title2" | "title3" | "title4" | "title5";
+  variant:
+    | "logo"
+    | "title1"
+    | "title2"
+    | "title3"
+    | "title4"
+    | "title5"
+    | "title6";
 
   animation?: boolean;
 }

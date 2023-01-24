@@ -4,20 +4,18 @@ import { LinkStyled } from "../../../components/common/Link/style";
 import { BaseTitle } from "../../../components/common/Title/style";
 
 export const SectionStyled = styled.section`
-  /* height: 100vh; */
   ${Container} {
     .header {
       display: flex;
       flex-direction: column-reverse;
       img {
-        width: 100%;
-        max-width: 359px;
-        height: 252px;
-        align-self: center;
+        width: 90%;
+        max-width: 400px;
+        align-self: flex-start;
         text-align: center;
       }
       div {
-        margin-top: 5rem;
+        margin-top: 3rem;
         display: flex;
         flex-direction: column;
 
@@ -26,6 +24,10 @@ export const SectionStyled = styled.section`
           text-align: left;
           justify-content: flex-start;
           margin-bottom: 17px;
+          font-size: 40px;
+          @media (min-width: 1200px) {
+            font-size: 48px;
+          }
         }
 
         p {
@@ -36,9 +38,14 @@ export const SectionStyled = styled.section`
           line-height: 26px;
           color: #747474;
           max-width: 600px;
+          margin-bottom: 2rem;
 
           @media (min-width: 800px) {
-            font-size: 15px;
+            font-size: 14px;
+          }
+
+          @media (min-width: 1200px) {
+            margin-bottom: 0rem;
           }
         }
       }
@@ -47,17 +54,33 @@ export const SectionStyled = styled.section`
         flex-direction: row;
 
         img {
-          max-width: 526px;
-          height: 319px;
+          max-width: 500px;
+          height: 349px;
         }
 
         div {
-          justify-content: flex-start;
+          padding: 4rem 0;
+          justify-content: space-between;
           gap: 10px;
+          margin: 0;
         }
 
         ${BaseTitle} {
           margin-bottom: 0;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        div {
+          padding: 3rem 0;
+          justify-content: end;
+          gap: 10px;
+          margin: 0;
+        }
+
+        img {
+          max-width: 539px;
+          height: 322px;
         }
       }
     }
@@ -69,9 +92,8 @@ export const SectionStyled = styled.section`
       font-weight: 400;
       font-size: 18px;
       line-height: 29px;
-   
 
-        margin-top: 10rem;
+      margin-top: 60px;
       color: #747474;
     }
 
@@ -82,9 +104,9 @@ export const SectionStyled = styled.section`
       flex-direction: column;
       width: 100%;
       max-width: 1290px;
-      height: 211px;
+      height: 260px;
       padding: 1rem;
-      background: #d9d9d9;
+      background: #9ea2a9;
       border-radius: 20px;
       gap: 1rem;
       margin-top: 2rem;
@@ -102,36 +124,47 @@ export const SectionStyled = styled.section`
         letter-spacing: -0.01em;
         color: #ffffff;
 
-        @media (min-width: 800px) {
+        @media (min-width: 900px) {
           font-size: 40px;
         }
       }
 
       div {
         display: flex;
-        /* flex-direction: column; */
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
         gap: 10px;
       }
       ${LinkStyled} {
-        width: 135px;
-        height: 48px;
-
+        width: 150px;
+        height: 54px;
+        font-size: 12px;
         @media (min-width: 1000px) {
-          width: 204px;
-          height: 58px;
+          width: 186px;
+          height: 65px;
+          font-size: 14px;
         }
       }
 
-      @media (min-width: 400px) {
+      ${LinkStyled}:nth-of-type(2){
+        width: 209px;
+   
+      }
+
+      @media (min-width: 600px) {
         height: 161px;
         flex-direction: row;
         justify-content: space-between;
         padding: 0 4rem;
       }
-
+      
+      @media (min-width:900px){
+        div{
+          flex-direction: row;
+        }
+      }
+      
       @media (max-height: 760px) {
         /* background-color: red; */
       }

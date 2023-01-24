@@ -17,14 +17,14 @@ export const SideBarStyled = styled.aside<{
   variant: "main_side_bar";
 }>`
   position: fixed;
-  top: 8vh;
+  top: 80px;
   left: 0;
-  height: 92vh;
+  height: calc(100vh - 80px);
   width: 50vw;
   background-color: ${({ theme }) => theme.colors.whiteFixed};
   transform: translateX(-100%);
   transition: transform 0.5s ease-in;
-  z-index: 9999;
+  z-index: 999999999999999999999999999999;
   overflow: hidden;
 
   nav {
@@ -43,7 +43,6 @@ export const SideBarStyled = styled.aside<{
       font-weight: 800;
       font-size: ${convertToRem(20)};
       line-height: ${convertToRem(23)};
-      /* color: ${({ theme }) => theme.colors.grey5}; */
     }
   }
   ${({ isSideBarOpen }) =>
@@ -56,14 +55,16 @@ export const SideBarStyled = styled.aside<{
 export const Overlay = styled.div<{ isSideBarOpen: boolean }>`
   position: fixed;
   inset: 0;
-  top: 8vh;
+  top: 80px;
   width: 100%;
-  height: 92vh;
+  height: calc(100vh - 80px);
   transition: background-color 200ms;
-
+  pointer-events: none;
+  z-index: 99999999999999999999;
   ${({ isSideBarOpen }) =>
     isSideBarOpen &&
     css`
+    pointer-events: auto;
       z-index: 100;
       background-color: rgba(0, 0, 0, 0.3);
     `}

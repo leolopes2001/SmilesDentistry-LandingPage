@@ -3,6 +3,7 @@ import Link from "../../../components/common/Link";
 import Title from "../../../components/common/Title";
 import Twenty from "../../../assets/svgs/icons/20.svg";
 import { SectionStyled } from "./style";
+import DentistsSlider from "../../../components/Slider/DentistsSlider";
 const Dentists = () => {
   return (
     <SectionStyled>
@@ -11,7 +12,7 @@ const Dentists = () => {
           <img src={Twenty} alt="Number 20" />
           <div>
             <Title tag="h2" variant="title3">
-              Tratamentos odontológicos 
+              Tratamentos odontológicos
             </Title>
             <p>
               Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea
@@ -22,7 +23,8 @@ const Dentists = () => {
             </p>
           </div>
         </div>
-        {/* slider */}
+        <DentistsSlider />
+
         <p className="info">
           Contact Our Expert Team Memeber To Take Our <span>Best Policies</span>
         </p>
