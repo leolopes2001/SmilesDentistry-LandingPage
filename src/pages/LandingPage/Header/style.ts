@@ -149,9 +149,16 @@ export const HeaderStyled = styled.header<{ isOut: boolean }>`
       height: 100%;
       gap: 13px;
       padding-bottom: 17px;
-      img {
+
+      .phone {
         align-self: flex-end;
-        transform: translateY(-2px);
+        transform: translateY(-1px);
+      }
+
+      .phone.white {
+        path {
+          fill: white;
+        }
       }
 
       p {

@@ -35,6 +35,19 @@ export const FooterStyled = styled.footer`
       border-bottom: 1px solid #253450;
       padding-bottom: 30px;
       margin-bottom: 60px;
+
+      @media (min-width: 1200px) {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-top: 6rem;
+      }
+
+      div {
+        @media (min-width: 1200px) {
+          display: flex;
+        }
+      }
     }
 
     .top_content div h1 {
@@ -63,6 +76,10 @@ export const FooterStyled = styled.footer`
       background: #132038;
       color: #ffffff;
       border-radius: 50%;
+      transition: background-color 300ms;
+      :hover {
+        background-color: ${({ theme }) => theme.colors.primary};
+      }
     }
 
     .list_container {
@@ -77,6 +94,10 @@ export const FooterStyled = styled.footer`
         justify-content: flex-start;
         gap: 5rem;
         flex-direction: row;
+      }
+
+      @media (min-width: 1200px) {
+        margin-bottom: 16px;
       }
     }
 
@@ -121,6 +142,7 @@ export const FooterStyled = styled.footer`
         font-size: 15px;
         line-height: 35px;
         color: #ffffff;
+        text-align: center;
       }
 
       a {
@@ -135,6 +157,16 @@ export const FooterStyled = styled.footer`
         }
         :hover {
           color: ${({ theme }) => theme.colors.primary};
+        }
+      }
+
+      @media (min-width: 1200px) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 52px;
+        a {
+          flex-direction: row;
+          gap: 0.5rem;
         }
       }
     }
@@ -163,6 +195,8 @@ export const FooterStyled = styled.footer`
       width: 100%;
       max-width: 433px;
       ${ButtonStyled} {
+        width: 30%;
+        font-size: 10px;
         top: 0px;
         right: 0;
         position: absolute;
@@ -172,6 +206,7 @@ export const FooterStyled = styled.footer`
         width: 100%;
         max-width: 433px;
         height: 55px;
+        color: white;
       }
     }
 
@@ -189,6 +224,13 @@ export const FooterStyled = styled.footer`
         /* line-height: 24px; */
         color: #ffffff;
       }
+    }
+
+    @media (min-width: 1200px) {
+      top: 310px;
+      right: 0;
+      max-width: 400px;
+      position: absolute;
     }
   }
 `;

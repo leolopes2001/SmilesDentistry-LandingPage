@@ -1,11 +1,6 @@
 import { Slide, Slider, SliderProps } from "..";
-
-import Aparelho from "../../../assets/svgs/services/aparelho1.jpg";
-import ServiceCard from "./ServiceCard";
-
-const ImageVariant = {
-
-}
+import ServiceCard, { ServiceTypes } from "./ServiceCard";
+import { services } from "../../../components-mock.json";
 
 const SerivesSlider = () => {
   const settings: SliderProps = {
@@ -13,20 +8,25 @@ const SerivesSlider = () => {
     pagination: { clickable: true },
     loop: true,
     slidesPerView: 1,
-    // spaceBetween: 40,
+    centeredSlides: true,
+    spaceBetween: 40,
+    breakpoints: {
+      500: {
+        slidesPerView: 1.6,
+      },
+      1000: {
+        slidesPerView: 3.8
+      }
+    },
   };
 
   return (
     <Slider variant="type2" settings={settings}>
-      <Slide>
-        <ServiceCard/>
-      </Slide>
-      <Slide>
-        <ServiceCard/>
-      </Slide>
-      <Slide>
-        <ServiceCard/>
-      </Slide>
+      {services.map((el) => (
+        <Slide key={el}>
+          <ServiceCard service={el as ServiceTypes} />
+        </Slide>
+      ))}
     </Slider>
   );
 };

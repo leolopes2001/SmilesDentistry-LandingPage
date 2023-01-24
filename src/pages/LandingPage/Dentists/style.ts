@@ -5,9 +5,16 @@ import { BaseTitle } from "../../../components/common/Title/style";
 
 export const SectionStyled = styled.section`
   ${Container} {
+    .dentists_list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     .header {
       display: flex;
       flex-direction: column-reverse;
+
       img {
         width: 90%;
         max-width: 400px;
@@ -52,7 +59,6 @@ export const SectionStyled = styled.section`
 
       @media (min-width: 1000px) {
         flex-direction: row;
-
         img {
           max-width: 500px;
           height: 349px;
@@ -60,6 +66,7 @@ export const SectionStyled = styled.section`
 
         div {
           padding: 4rem 0;
+          padding-top: 7rem;
           justify-content: space-between;
           gap: 10px;
           margin: 0;
@@ -71,6 +78,8 @@ export const SectionStyled = styled.section`
       }
 
       @media (min-width: 1200px) {
+        gap: 2rem;
+
         div {
           padding: 3rem 0;
           justify-content: end;
@@ -92,9 +101,13 @@ export const SectionStyled = styled.section`
       font-weight: 400;
       font-size: 18px;
       line-height: 29px;
-
       margin-top: 60px;
       color: #747474;
+      
+      span {
+        font-weight: 600;
+        color: ${({ theme }) => theme.colors.primary};
+      }
     }
 
     .schedule {
@@ -147,9 +160,8 @@ export const SectionStyled = styled.section`
         }
       }
 
-      ${LinkStyled}:nth-of-type(2){
+      ${LinkStyled}:nth-of-type(2) {
         width: 209px;
-   
       }
 
       @media (min-width: 600px) {
@@ -158,15 +170,16 @@ export const SectionStyled = styled.section`
         justify-content: space-between;
         padding: 0 4rem;
       }
-      
-      @media (min-width:900px){
-        div{
+
+      @media (min-width: 900px) {
+        div {
           flex-direction: row;
         }
       }
-      
-      @media (max-height: 760px) {
-        /* background-color: red; */
+
+      @media (max-height: 760px) and (min-width: 1100px) {
+        height: 140px;
+        max-height: 160px;
       }
     }
   }

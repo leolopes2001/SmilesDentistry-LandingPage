@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ServiceCatdStyled = styled.div`
+export const ServiceCardStyled = styled.div`
   width: 309px;
   height: 247px;
   width: 236px;
@@ -30,6 +30,7 @@ export const ServiceCatdStyled = styled.div`
     line-height: 105.5%;
     letter-spacing: -0.01em;
     color: #ffffff;
+    text-align: center; 
   }
   .hover_points {
     display: flex;

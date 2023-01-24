@@ -10,7 +10,7 @@ import MobileMenu from "../../../components/MobileMenu";
 import { useEffect } from "react";
 import { useMemo } from "react";
 
-import Phone from "../../../assets/svgs/icons/phone.svg";
+import { ReactComponent as Phone } from "../../../assets/svgs/icons/phone.svg";
 import Points from "../../../assets/svgs/icons/points.svg";
 
 const Header = () => {
@@ -66,7 +66,8 @@ const Header = () => {
             ))}
           </nav>
           <div className="contact_container">
-            <img src={Phone} alt="Phone" />
+            <Phone className={isOutOfPosition ? "phone white" : "phone"} />
+
             <p>{contact_info.phone}</p>
             <img src={Points} alt="Points" />
           </div>

@@ -11,8 +11,10 @@ import { ReactComponent as Points } from "../../../assets/svgs/icons/points.svg"
 import Wpp from "../../../assets/svgs/icons/whatsapp.svg";
 import { SectionStyled } from "./style";
 import SerivesSlider from "../../../components/Slider/ServiceSlider";
-import ServiceCard from "../../../components/Slider/ServiceSlider/ServiceCard";
-
+import ServiceCard, {
+  ServiceTypes,
+} from "../../../components/Slider/ServiceSlider/ServiceCard";
+import { services } from "../../../components-mock.json";
 import Back from "../../../assets/svgs/background/serviceTop.svg";
 import Back2 from "../../../assets/svgs/background/borderBottom.svg";
 
@@ -31,14 +33,9 @@ const Services = () => {
         </div>
         {width > 1200 ? (
           <div className="list_services">
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
+            {services.map((el) => (
+              <ServiceCard key={el} service={el as ServiceTypes} />
+            ))}
           </div>
         ) : (
           <SerivesSlider />
@@ -46,7 +43,11 @@ const Services = () => {
 
         <div className="info_box">
           <Board1 className="board1" />
-          <Board1 className="board2" />
+          {width > 1000 ? (
+            <Board2 className="board2" />
+          ) : (
+            <Board1 className="board2" />
+          )}
 
           <Title variant="title5" tag="h6">
             Fale com a gente agora
@@ -63,7 +64,7 @@ const Services = () => {
             </Link>
           </div>
         </div>
-        <img src={Back2} alt="" className="boardBottom"/>
+        <img src={Back2} alt="" className="boardBottom" />
         <img src={Back} alt="Background" className="boardTop" />
       </Container>
     </SectionStyled>

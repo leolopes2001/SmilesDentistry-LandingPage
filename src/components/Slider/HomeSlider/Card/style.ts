@@ -119,8 +119,8 @@ export const CardStyled = styled.div`
     } */
 
     ${LinkStyled}:nth-of-type(1) {
-      width: 170px;
-      height: 52px;
+      width: 135px;
+      height: 48px;
 
       @media (min-width: 800px) {
         width: 190px;
@@ -134,8 +134,8 @@ export const CardStyled = styled.div`
     }
 
     ${LinkStyled}:nth-of-type(2) {
-      width: 190px;
-      height: 52px;
+      width: 160px;
+      height: 48px;
 
       @media (min-width: 800px) {
         width: 224px;

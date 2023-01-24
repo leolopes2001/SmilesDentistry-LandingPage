@@ -99,7 +99,8 @@ const Footer = () => {
             <div className="checkbox">
               <input type="checkbox" />
               <label htmlFor="">
-                I agree that my submitted data is being collected and stored.
+                Eu concordo que meus dados enviados estão sendo coletados e
+                armazenados.
               </label>
             </div>
           </form>

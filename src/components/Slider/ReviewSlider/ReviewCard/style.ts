@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const ReviewCardStyled = styled.div`
-  width: 296px;
-  height: 306px;
+  min-width: 236px;
+  max-width: 296px;
+  min-height: 306px;
+  max-height: 306px;
   background: #132038;
-  box-shadow: 0px 50px 57px rgba(0, 13, 39, 0.78);
   border-radius: 20px;
   padding: 1rem;
   display: flex;
@@ -51,7 +52,7 @@ export const ReviewCardStyled = styled.div`
         font-style: normal;
         font-weight: 700;
         font-size: 18px;
-      
+
         color: #ffffff;
       }
 
@@ -60,7 +61,6 @@ export const ReviewCardStyled = styled.div`
         font-style: normal;
         font-weight: 500;
         font-size: 10px;
-        
 
         letter-spacing: 0.05em;
         text-transform: uppercase;
@@ -69,22 +69,11 @@ export const ReviewCardStyled = styled.div`
     }
   }
 
-  @media (min-width: 800px) {
-    width: 418px;
-    height: 470px;
+  @media (min-width: 1200px) {
+    /* min-width: 236px;
+    min-height: 306px; */
+    
+    min-width: 322px;
+    min-height: 363px;
   }
 `;
-
-// <div className="starts">
-// <AiFillStar />
-// <AiFillStar />
-// <AiFillStar />
-// <AiFillStar />
-// <AiFillStar />
-// </div>
-// <p className="review">
-// {review}
-// </p>
-// <div className="info">
-// <div className="photo"></div>
-// <div className="name">

@@ -45,13 +45,23 @@ export const SectionStlyed = styled.section`
   ${Container} {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
     margin-bottom: 3rem;
     gap: 2rem;
+
+    @media (min-width: 1100px) {
+      align-items: flex-start;
+      flex-direction: row;
+    }
     ul {
       display: flex;
       flex-direction: column;
       gap: 15px;
+      width: 100%;
+      max-width: 463px;
+      justify-content: space-between;
     }
     ul .card {
       display: flex;
@@ -63,6 +73,8 @@ export const SectionStlyed = styled.section`
       height: 70px;
       padding: 0.5rem;
       transition: all 300ms;
+      width: 100%;
+
       svg:nth-child(1) {
         width: 60px;
         margin-right: 0.5rem;
@@ -100,17 +112,36 @@ export const SectionStlyed = styled.section`
         color: #2ca2fb;
       }
     }
+
+    section {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      max-height: 569px;
+      max-width: 485px;
+    }
     section ${BaseTitle} {
       display: block;
       font-size: 30px;
+
       margin-bottom: 2rem;
+
+      @media (min-width: 1000px) {
+        width: 100%;
+        max-width: 550px;
+        font-size: 45px;
+        
+      }
     }
 
     form {
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
-
+      width: 100%;
+      max-width: 471px;
       h3 {
         font-size: 30px;
         margin-bottom: 1rem;
@@ -123,7 +154,6 @@ export const SectionStlyed = styled.section`
         align-items: center;
         letter-spacing: -0.01em;
         color: #000e29;
-
       }
       textarea {
         background: #f9f9f9;
@@ -135,6 +165,11 @@ export const SectionStlyed = styled.section`
 
       ${Input} {
         height: 50px;
+      }
+
+      @media (min-width: 1100px){
+        border-left: 1px solid  #F0F0F0;
+        padding-left: 2.5rem;
       }
     }
   }

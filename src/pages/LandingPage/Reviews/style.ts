@@ -4,26 +4,26 @@ import { Text } from "../../../components/common/Text/style";
 import { BaseTitle } from "../../../components/common/Title/style";
 
 export const SectionStlyed = styled.section`
-  height: 95vh;
+  height: 100vh;
   width: 100vw;
   position: relative;
   > div {
     position: absolute;
   }
- 
+
   ${Container} {
     position: absolute;
     z-index: 9999;
     width: 100%;
     top: 80%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
   }
 
   > img {
     object-fit: cover;
     width: 100vw;
-    height: 95vh;
+    height: 100vh;
     position: relative;
     z-index: -1;
   }
@@ -35,7 +35,7 @@ export const SectionStlyed = styled.section`
     position: absolute;
     top: 20%;
     left: 50%;
-    transform: translate(-50%, -65%);
+    transform: translate(-50%, -40%);
     z-index: 99999999;
 
     ${Text} {
@@ -52,20 +52,30 @@ export const SectionStlyed = styled.section`
       align-items: center;
       justify-content: center;
       text-align: center;
-      max-width: 600px;
+      max-width: 360px;
       display: block;
-      width: 400px;
-      font-size: 32px;
-
+      width: 100%;
+      min-width: 270px;
+      font-size: 28px;
+      span {
+        width: 100%;
+      }
       @media (min-width: 800px) {
-        width: 600px;
+        max-width: 500px;
         font-size: 40px;
       }
 
-      @media (max-height: 700px) and (min-width: 800px){
+      @media (max-height: 700px) and (min-width: 800px) {
         font-size: 40px;
-        width: 400px;
+        max-width: 500px;
       }
+    }
+  }
+
+  @media (min-width: 1200px) and (max-height: 750px) {
+    height: 120vh;
+    img {
+      height: 120vh;
     }
   }
 `;

@@ -2,6 +2,7 @@ import { Slide, Slider, SliderProps } from "..";
 
 import Img1 from "../../../assets/svgs/background/family3.jpg";
 import Img2 from "../../../assets/svgs/background/family.jpg";
+import Img3 from "../../../assets/svgs/background/family5.jpg";
 import { useRef } from "react";
 import useSwiperRef from "../../../hooks/useSwiperRef";
 
@@ -24,12 +25,6 @@ const HomeSlider = () => {
   return (
     <Slider variant="type1" settings={settings}>
       <Slide>
-        <img src={Img1} alt="" />
-        <Container>
-          <Card />
-        </Container>
-      </Slide>
-      <Slide>
         <img src={Img2} alt="" />
         <Container>
           <Card />
@@ -37,6 +32,12 @@ const HomeSlider = () => {
       </Slide>
       <Slide>
         <img src={Img1} alt="" />
+        <Container>
+          <Card />
+        </Container>
+      </Slide>
+      <Slide>
+        <img src={Img3} alt="" />
         <Container>
           <Card />
         </Container>

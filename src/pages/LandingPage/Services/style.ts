@@ -71,7 +71,7 @@ export const SectionStyled = styled.section`
 
     .title_box {
       position: relative;
-      z-index: 99999999999999999;
+      z-index: 99999999;
       max-width: 500px;
       /* margin-top: 4rem; */
       text-align: center;
@@ -129,6 +129,11 @@ export const SectionStyled = styled.section`
         right: -20px;
         path {
           fill: ${({ theme }) => theme.colors.secondary};
+        }
+
+        @media (min-width: 1001px){
+          transform: scale(1);
+          right: -3px;
         }
       }
 
@@ -213,7 +218,7 @@ export const SectionStyled = styled.section`
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    z-index: 99999999999999999999999;
+    z-index: 999999999;
     /* transform: translateY(-10%); */
   }
 

@@ -7,6 +7,16 @@ const DentistsSlider = () => {
     loop: true,
     navigation: true,
     slidesPerView: 1,
+    centeredSlides: true,
+    breakpoints:{
+      500: {
+        slidesPerView: 1.9,
+      },
+      700:{
+        slidesPerView: 2.2,
+
+      }
+    }
   };
 
   return (

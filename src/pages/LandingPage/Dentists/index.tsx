@@ -4,7 +4,13 @@ import Title from "../../../components/common/Title";
 import Twenty from "../../../assets/svgs/icons/20.svg";
 import { SectionStyled } from "./style";
 import DentistsSlider from "../../../components/Slider/DentistsSlider";
+import { dentists } from "../../../components-mock.json";
+import DentistsCard from "../../../components/Slider/DentistsSlider/DentistsCard";
+import useWindowSize from "../../../hooks/useWindowSize";
+
 const Dentists = () => {
+  const [width] = useWindowSize();
+
   return (
     <SectionStyled>
       <Container>
@@ -23,7 +29,19 @@ const Dentists = () => {
             </p>
           </div>
         </div>
-        <DentistsSlider />
+        {width > 1100 ? (
+          <div className="dentists_list">
+            {dentists.map(({ id, name, specialization }) => (
+              <DentistsCard
+                id={id as "1" | "2" | "3" | "4"}
+                name={name}
+                work={specialization}
+              />
+            ))}
+          </div>
+        ) : (
+          <DentistsSlider />
+        )}
 
         <p className="info">
           Contact Our Expert Team Memeber To Take Our <span>Best Policies</span>

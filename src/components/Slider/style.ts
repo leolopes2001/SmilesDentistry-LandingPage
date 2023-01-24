@@ -135,6 +135,10 @@ const SliderWrapVariant = {
       max-width: 350px;
       padding: 3rem 0;
       margin-bottom: 1rem;
+
+      @media (min-width: 1000px) {
+        max-width: 100%;
+      }
     }
 
     .swiper-slide {
@@ -209,11 +213,18 @@ const SliderWrapVariant = {
     .swiper {
       width: 100%;
       padding-bottom: 4rem;
+
+      @media (min-width: 1000px) {
+        width: 90%;
+      }
+      @media (min-width: 1200px) {
+        width: 80%;
+      }
     }
 
     .swiper-slide {
-      width: 296px;
-      height: 306px;
+      width: 322px;
+      height: auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -234,7 +245,6 @@ const SliderWrapVariant = {
         justify-content: center;
       }
 
-      
       .swiper-button-prev::after {
         font-size: 40px;
         transform: translateX(-13px);
