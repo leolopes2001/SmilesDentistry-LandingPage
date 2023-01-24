@@ -5,7 +5,7 @@ import {
   useContext,
   useState,
 } from "react";
-import { IDefaultContextProps } from "./types";
+import { IDefaultProps } from "./types";
 
 export interface SidebarContextProps {
   isSideBarOpen: boolean;
@@ -18,7 +18,7 @@ const SideBarContext = createContext<SidebarContextProps>(
   {} as SidebarContextProps
 );
 
-const SideBarProvider = ({ children }: IDefaultContextProps) => {
+const SideBarProvider = ({ children }: IDefaultProps) => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const [sectionActiveSideBar, setSectionActiveSideBar] = useState<string>("");
 

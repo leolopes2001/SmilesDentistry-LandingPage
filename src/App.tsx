@@ -10,7 +10,7 @@ const App = () => {
 
       <LandingPage />
 
-      {/* <SideBar variant="main_side_bar" /> */}
+      <SideBar variant="main_side_bar" />
     </Providers>
   );
 };
