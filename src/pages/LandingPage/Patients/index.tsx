@@ -13,6 +13,8 @@ import { ReactComponent as Home } from "../../../assets/svgs/icons/home.svg";
 import { ReactComponent as College } from "../../../assets/svgs/icons/college.svg";
 
 import { AiOutlineArrowRight } from "react-icons/ai";
+
+
 const Patients = () => {
   return (
     <SectionStlyed>

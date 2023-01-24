@@ -103,7 +103,7 @@ export const SectionStyled = styled.section`
       line-height: 29px;
       margin-top: 60px;
       color: #747474;
-      
+
       span {
         font-weight: 600;
         color: ${({ theme }) => theme.colors.primary};
@@ -149,19 +149,33 @@ export const SectionStyled = styled.section`
         justify-content: center;
         gap: 10px;
       }
+
       ${LinkStyled} {
         width: 150px;
-        height: 54px;
+        height: 48px;
         font-size: 12px;
+
         @media (min-width: 1000px) {
           width: 186px;
-          height: 65px;
+          height: 58.5px;
           font-size: 14px;
         }
       }
 
       ${LinkStyled}:nth-of-type(2) {
-        width: 209px;
+        width: 192px;
+      }
+
+      @media (min-width: 1200px) and (max-height: 750px) {
+        ${LinkStyled} {
+          font-size: 12px;
+          width: 156px;
+          height: 49.8px;
+        }
+
+        ${LinkStyled}:nth-of-type(2) {
+          width: 182px;
+        }
       }
 
       @media (min-width: 600px) {

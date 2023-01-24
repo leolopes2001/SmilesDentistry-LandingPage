@@ -5,13 +5,10 @@ import { Text } from "../../../components/common/Text/style";
 import { BaseTitle } from "../../../components/common/Title/style";
 
 export const SectionStyled = styled.section`
-  /* height: 135vh; */
   max-width: 100vw;
   height: auto !important;
   background-color: ${({ theme }) => theme.colors.background1};
   position: relative;
-  /* overflow-x: hidden !important; */
-  /* overflow: hidden; */
   margin-top: 10rem;
   margin-bottom: 10rem;
   .boardTop {
@@ -22,7 +19,7 @@ export const SectionStyled = styled.section`
     height: 500px;
     min-height: 350px;
     /* transform: translateX(40px); */
-    transform: scaleX(-1); 
+    transform: scaleX(-1);
     z-index: 999;
     width: 100vw;
     min-width: 100vw;
@@ -30,14 +27,13 @@ export const SectionStyled = styled.section`
     /* width: 1000px; */
   }
   .boardBottom {
-    
     object-fit: cover;
     position: absolute;
     bottom: -150px;
     height: 500px;
     min-height: 350px;
     /* transform: translateX(40px); */
-    transform: scaleX(-1); 
+    transform: scaleX(-1);
     z-index: 999;
     width: 100vw;
     min-width: 100vw;
@@ -56,14 +52,9 @@ export const SectionStyled = styled.section`
     width: 100vw;
 
     height: auto;
-    /* max-width: 100vw; */
     min-height: 900px;
     background-color: ${({ theme }) => theme.colors.background1};
-    /* position: absolute; */
     inset: 0;
-    /* top: 50%;
-    left: 50%; */
-    /* transform: translate(-50%, -50%); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,7 +64,6 @@ export const SectionStyled = styled.section`
       position: relative;
       z-index: 99999999;
       max-width: 500px;
-      /* margin-top: 4rem; */
       text-align: center;
 
       > ${BaseTitle} {
@@ -81,14 +71,9 @@ export const SectionStyled = styled.section`
         font-size: 40px;
         text-align: center;
       }
-
-      @media (min-width: 1200px) {
-        /* transform: translateY(60%); */
-      }
     }
 
     .info_box {
-      /* transform: translateY(-13%); */
       position: relative;
       z-index: 99999;
       width: 100%;
@@ -131,7 +116,7 @@ export const SectionStyled = styled.section`
           fill: ${({ theme }) => theme.colors.secondary};
         }
 
-        @media (min-width: 1001px){
+        @media (min-width: 1001px) {
           transform: scale(1);
           right: -3px;
         }
@@ -153,13 +138,12 @@ export const SectionStyled = styled.section`
           color: #ffffff;
           /* width: 100%; */
         }
-        svg {
-          /* width: 30px; */
-        }
+      
         img {
           width: 30px;
           height: 30px;
         }
+    
         @media (min-width: 1000px) {
           width: 200px;
         }
@@ -171,18 +155,28 @@ export const SectionStyled = styled.section`
         gap: 0.8rem;
         position: relative;
         svg {
-          left: -25px;
+          left: -23px;
           position: absolute;
+
+          circle {
+            fill: ${({ theme }) => theme.colors.secondary};
+          }
         }
+
         ${LinkStyled} {
           font-size: 12px;
-          width: 132px;
+          width: 135px;
           height: 48px;
 
           @media (min-width: 1000px) {
             font-size: 12px;
-            width: 149px;
-            height: 48px;
+            width: 155px;
+            height: 54.5px;
+          }
+
+          @media (min-width: 1200px) and (max-height: 750px) {
+            width: 155px;
+            height: 49.8px;
           }
         }
       }
@@ -219,66 +213,5 @@ export const SectionStyled = styled.section`
     flex-wrap: wrap;
     position: relative;
     z-index: 999999999;
-    /* transform: translateY(-10%); */
   }
-
-  /* @media (max-height: 700px) and (max-width: 400px) {
-    height: 150vh;
-    background-color: red;
-    > img {
-      height: 150vh;
-    }
-  } */
-
-  /* @media (min-width: 380px) and (min-height: 800px) {
-    height: 120vh;
-    > img {
-      height: 120vh;
-    }
-  } */
-
-  /* @media (min-height: 860px) and (max-width: 1100px) {
-    height: 110vh;
-    > img {
-      height: 110vh;
-    }
-  /* }  */
-
-  /* @media (min-width: 700px) and (min-height: 950px) {
-    height: 110vh;
-    gap: 0;
-    > img {
-      height: 110vh;
-    }
-  }
-
-  @media (min-width: 1280px) and (min-height: 700px) {
-    height: 155vh;
-    > img {
-      height: 155vh;
-    }
-  }
-
-  @media (min-width: 1600px) and (min-height: 800px) {
-    height: 120vh;
-    > img {
-      height: 120vh;
-    }
-  } */
-
-  /* @media (min-width: 1450px) and (min-height: 950px) {
-    height: 120vh;
-    gap: 0;
-    > img {
-      height: 120vh;
-    }
-  } */
-
-  /* @media (min-height: 850px) and (min-width: 1800px) {
-    height: 110vh;
-
-    > img {
-      height: 110vh;
-    }
-  } */
 `;

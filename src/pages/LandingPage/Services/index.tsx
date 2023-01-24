@@ -1,4 +1,4 @@
-import Background from "../../../assets/svgs/background/back22.svg";
+
 import { Container } from "../../../components/common/Container/style";
 import Link from "../../../components/common/Link";
 import { Text } from "../../../components/common/Text/style";
@@ -8,7 +8,7 @@ import useWindowSize from "../../../hooks/useWindowSize";
 import { ReactComponent as Board1 } from "../../../assets/svgs/services/board1.svg";
 import { ReactComponent as Board2 } from "../../../assets/svgs/services/board2.svg";
 import { ReactComponent as Points } from "../../../assets/svgs/icons/points.svg";
-import Wpp from "../../../assets/svgs/icons/whatsapp.svg";
+import Wpp from "../../../assets/svgs/icons/wpp.svg";
 import { SectionStyled } from "./style";
 import SerivesSlider from "../../../components/Slider/ServiceSlider";
 import ServiceCard, {
@@ -17,7 +17,7 @@ import ServiceCard, {
 import { services } from "../../../components-mock.json";
 import Back from "../../../assets/svgs/background/serviceTop.svg";
 import Back2 from "../../../assets/svgs/background/borderBottom.svg";
-
+import {contact_info} from "../../../components-mock.json"
 const Services = () => {
   const [width] = useWindowSize();
 
@@ -54,7 +54,7 @@ const Services = () => {
           </Title>
           <div className="info">
             <Points />
-            <p>31 9999999999</p>
+            <p>{contact_info.phone}</p>
             <img src={Wpp} alt="What Zapp" />
           </div>
           <div className="link">

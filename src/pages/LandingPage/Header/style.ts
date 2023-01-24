@@ -150,9 +150,17 @@ export const HeaderStyled = styled.header<{ isOut: boolean }>`
       gap: 13px;
       padding-bottom: 17px;
 
+      img:nth-of-type(1) {
+        transform: translateY(-1px);
+      }
+
       .phone {
         align-self: flex-end;
         transform: translateY(-1px);
+
+        @media (min-width: 100px) and (max-height: 750px) {
+          transform: scale(0.8) translateY(-2px);
+        }
       }
 
       .phone.white {
