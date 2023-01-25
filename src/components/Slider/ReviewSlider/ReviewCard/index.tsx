@@ -1,5 +1,6 @@
 import { AiFillStar } from "react-icons/ai";
 import { ReviewCardStyled } from "./style";
+import Patient from "../../../../assets/svgs/reviewPhotos/patient0.svg";
 
 interface IReviewCardProps {
   name: string;
@@ -17,11 +18,11 @@ const ReviewCard = ({ name, review, work }: IReviewCardProps) => {
         <AiFillStar />
         <AiFillStar />
       </div>
-      <p className="review">
-        {review}
-      </p>
+      <p className="review">{review}</p>
       <div className="info">
-        <div className="photo"></div>
+        <div className="photo">
+          <img src={Patient} alt="Patient photo" />
+        </div>
         <div className="name">
           <span>{name}</span>
           <p>{work}</p>

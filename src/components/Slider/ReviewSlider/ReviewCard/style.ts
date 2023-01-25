@@ -25,6 +25,10 @@ export const ReviewCardStyled = styled.div`
     font-size: 14px;
     line-height: 34px;
     color: #ffffff;
+
+    @media (min-width: 1200px) {
+      font-size: 16px;
+    }
   }
 
   .info {
@@ -38,6 +42,11 @@ export const ReviewCardStyled = styled.div`
       background: #747474;
       mix-blend-mode: luminosity;
       border-radius: 52px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .name {
@@ -72,7 +81,7 @@ export const ReviewCardStyled = styled.div`
   @media (min-width: 1200px) {
     /* min-width: 236px;
     min-height: 306px; */
-    
+
     min-width: 322px;
     min-height: 363px;
   }
