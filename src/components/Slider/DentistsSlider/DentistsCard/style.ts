@@ -20,6 +20,7 @@ export const DentistsCardStyled = styled.div`
   }
 
   .name_box {
+    text-align: center;
     h6 {
       font-family: "Archivo";
       font-style: normal;
@@ -31,6 +32,7 @@ export const DentistsCardStyled = styled.div`
       text-align: center;
       letter-spacing: -0.01em;
       color: #000e29;
+      justify-content: center;
     }
 
     p {
@@ -44,6 +46,7 @@ export const DentistsCardStyled = styled.div`
       text-align: center;
       text-transform: uppercase;
       color: #747474;
+      justify-content: center;
     }
   }
 

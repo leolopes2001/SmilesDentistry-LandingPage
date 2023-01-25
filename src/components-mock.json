@@ -18,7 +18,7 @@
         {
             "id": "1",
             "name": "Dr. Robson",
-            "specialization": "Ortodontista"
+            "specialization": "Implantodontista"
         },
         {
             "id": "2",
@@ -27,13 +27,13 @@
         },
         {
             "id": "3",
-            "name": "Dra. Márcia",
-            "specialization": "Endodontista"
+            "name": "Dr. Gilbert",
+            "specialization": "Clínico Geral"
         },
         {
             "id": "4",
-            "name": "Dr. Gilbert",
-            "specialization": "Clínico Geral"
+            "name": "Dra. Márcia",
+            "specialization": "Endodontista"
         }
     ],
     "navLinks": [
