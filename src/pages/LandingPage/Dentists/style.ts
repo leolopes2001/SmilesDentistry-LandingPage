@@ -4,6 +4,7 @@ import { LinkStyled } from "../../../components/common/Link/style";
 import { BaseTitle } from "../../../components/common/Title/style";
 
 export const SectionStyled = styled.section`
+overflow: hidden;
   ${Container} {
     .dentists_list {
       display: flex;
