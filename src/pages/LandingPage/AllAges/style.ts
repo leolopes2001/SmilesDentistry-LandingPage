@@ -6,7 +6,7 @@ import { BaseTitle } from "../../../components/common/Title/style";
 
 export const SectionStyled = styled.section`
   width: 100%;
-
+  overflow: hidden;
   padding: 1rem;
   ${ButtonStyled} {
     width: 135px;

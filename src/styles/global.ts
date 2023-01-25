@@ -11,7 +11,7 @@ export default createGlobalStyle`
 
     html{
         height: 100%;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
 
 
@@ -19,7 +19,7 @@ export default createGlobalStyle`
         position: relative;
         height: -webkit-fill-available;
         min-height: 100vh;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
 
 
@@ -42,5 +42,7 @@ export default createGlobalStyle`
     }
     
 
-
+    #home{
+        overflow: hidden;
+    }
 `;

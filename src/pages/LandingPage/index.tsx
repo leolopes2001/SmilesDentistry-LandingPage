@@ -96,7 +96,7 @@ const LandingPage = () => {
   return (
     <>
       <Header sectionActive={sectionActive} />
-      <Home id="home" innerRef={homeRef} />
+      <Home id="home" innerRef={homeRef}  />
       <AllAges id="todasIdades" innerRef={todasIdadesRef} />
       <Services id="tratamentos" innerRef={tratamentosRef} />
       <Patients id="agendamentos" innerRef={pacientesRef} />
