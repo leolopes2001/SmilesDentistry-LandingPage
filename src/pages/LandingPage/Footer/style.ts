@@ -200,6 +200,11 @@ export const FooterStyled = styled.footer`
         top: 0px;
         right: 0;
         position: absolute;
+
+        @media (min-width: 1200px){
+          width: 164px;
+          font-size: 13px;
+        }
       }
 
       ${Input} {
@@ -228,9 +233,10 @@ export const FooterStyled = styled.footer`
 
     @media (min-width: 1200px) {
       top: 310px;
-      right: 0;
+      right: 1rem;
       max-width: 400px;
       position: absolute;
+
     }
   }
 `;

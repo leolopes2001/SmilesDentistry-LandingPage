@@ -11,8 +11,9 @@ import Back2 from "../../../assets/svgs/background/family.jpg";
 import Top from "../../../assets/svgs/background/top.svg";
 import HomeSlider from "../../../components/Slider/HomeSlider";
 import { Background } from "./style";
+import { IPages } from "..";
 
-const Home = () => {
+const Home = ({id,innerRef}: IPages) => {
   const [currentNavLink, setCurrentNavLink] = useState("");
 
   const handleNavLinkClick = useCallback(
@@ -23,7 +24,7 @@ const Home = () => {
   console.log("criou");
 
   return (
-    <main>
+    <main ref={innerRef} id={id} data-aos="zoom-out">
       <Background>
         <HomeSlider />
 
@@ -31,6 +32,6 @@ const Home = () => {
       </Background>
     </main>
   );
-}
+};
 
 export default Home;

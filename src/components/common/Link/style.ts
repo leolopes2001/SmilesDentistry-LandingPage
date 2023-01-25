@@ -10,13 +10,17 @@ const LinkVariant = {
     border-radius: ${convertToRem(91)};
     line-height: ${convertToRem(64)};
     text-transform: uppercase;
-
     @media (min-width: 1000px) {
       font-size: ${convertToRem(14)};
     }
-
+    
     @media (max-height: 700px) {
       font-size: 14px;
+    }
+    
+    transition: filter 300ms;
+    :hover {
+      filter: brightness(1.2);
     }
   `,
   secondary: css`

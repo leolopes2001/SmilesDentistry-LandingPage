@@ -5,12 +5,13 @@ import { SectionStyled } from "./style";
 import { ReactComponent as Man1 } from "../../../assets/svgs/background/man1.svg";
 import Man2 from "../../../assets/svgs/background/man2.png";
 import useWindowSize from "../../../hooks/useWindowSize";
+import { IPages } from "..";
 
-const AllAges = () => {
+const AllAges = ({id,innerRef}: IPages) => {
   const [width] = useWindowSize();
 
   return (
-    <SectionStyled>
+    <SectionStyled id={id} ref={innerRef}>
       <p>Atendimento para todas as idades</p>
       <div className="navigation_box">
         <Link variant="primary" color="primary">
@@ -24,7 +25,7 @@ const AllAges = () => {
         </Link>
       </div>
       <div className="content_box">
-        <div className="text_box">
+        <div className="text_box" data-aos="fade-left">
           <Text variant="labelPage">Aqui você tem</Text>
 
           <Title tag="h3" variant="title2">
@@ -47,7 +48,7 @@ const AllAges = () => {
             </Link>
           </div>
         </div>
-        <div className="img_box">
+        <div className="img_box" data-aos="fade-right">
           {width > 1100 ? <img src={Man2} /> : <Man1 />}
         </div>
       </div>

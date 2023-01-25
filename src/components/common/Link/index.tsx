@@ -11,7 +11,7 @@ export interface ILinkProps extends IDefaultProps {
 
 export default function Link({ href, children, ...rest }: ILinkProps) {
   return (
-    <LinkStyled href={href ? `href` : "agendaconsulta.com"}  {...rest}>
+    <LinkStyled href={href ? `#${href}` : "agendaconsulta.com"}  {...rest}>
       {children}
     </LinkStyled>
   );

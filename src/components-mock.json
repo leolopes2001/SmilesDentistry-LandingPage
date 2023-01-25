@@ -42,19 +42,19 @@
             "name": "Home"
         },
         {
-            "id": "services",
+            "id": "tratamentos",
             "name": "Tratamentos"
         },
         {
-            "id": "dentists",
-            "name": "Dentistas"
-        },
-        {
-            "id": "schedules",
+            "id": "agendamentos",
             "name": "Agendamentos"
         },
         {
-            "id": "howArrive",
+            "id": "dentistas",
+            "name": "Dentistas"
+        },
+        {
+            "id": "como-chegar",
             "name": "Como chegar"
         }
     ],
@@ -77,6 +77,10 @@
         },
         {
             "id": "img5",
+            "case": "Maria Machado - Prótese Total Fixa"
+        },
+        {
+            "id": "img6",
             "case": "Maria Machado - Prótese Total Fixa"
         }
     ],
@@ -114,11 +118,11 @@
         "office_hours": "Horário de atendimento: 8h às 17h",
         "days_of_work": "Segunda a Sábado"
     },
-    "social_media": {   
+    "social_media": {
         "facebook": "t",
         "twitter": "t",
         "behance": "th",
         "youtube": "t",
         "linkedin": "t"
     }
-}   
+}

@@ -37,6 +37,8 @@ const ButtonVariant = {
     flex: none;
     order: 0;
     flex-grow: 0;
+
+   
   `,
 };
 
@@ -54,7 +56,7 @@ export const ButtonStyled = styled.button<{
   border-radius: 4px;
 
   &:hover {
-    filter: brightnees(1.2);
+    filter: brightness(1.2);
   }
 
   ${({ variant }) => ButtonVariant[variant || "default"]}

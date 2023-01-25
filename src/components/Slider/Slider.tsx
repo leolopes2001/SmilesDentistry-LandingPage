@@ -16,7 +16,7 @@ interface ISliderProps {
 
 const Slider = ({ variant, settings, children }: ISliderProps) => {
   return (
-    <SliderWrap variant={variant} data-aos="fade-up">
+    <SliderWrap variant={variant}>
       <Swiper modules={[Navigation, Pagination, A11y]} {...settings}>
         {children}
       </Swiper>

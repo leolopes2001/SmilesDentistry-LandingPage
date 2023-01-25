@@ -4,10 +4,11 @@ import Title from "../../../components/common/Title";
 import Background from "../../../assets/svgs/background/reviewBack.svg";
 import { SectionStlyed } from "./style";
 import ReviewSlider from "../../../components/Slider/ReviewSlider";
+import { IPages } from "..";
 
-const Reviews = () => {
+const Reviews = ({id,innerRef}: IPages) => {
   return (
-    <SectionStlyed>
+    <SectionStlyed id={id} ref={innerRef}>
       <div className="title_box">
         <Text variant="labelPage">Our Client Feedback</Text>
         <Title variant="title2" tag="h4">

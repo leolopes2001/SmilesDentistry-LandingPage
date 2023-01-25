@@ -18,11 +18,12 @@ import { services } from "../../../components-mock.json";
 import Back from "../../../assets/svgs/background/serviceTop.svg";
 import Back2 from "../../../assets/svgs/background/borderBottom.svg";
 import {contact_info} from "../../../components-mock.json"
-const Services = () => {
+import { IPages } from "..";
+const Services = ({id,innerRef}: IPages) => {
   const [width] = useWindowSize();
 
   return (
-    <SectionStyled>
+    <SectionStyled id={id} ref={innerRef}>
       <Container variant="normal">
         <div className="title_box">
           <Text variant="labelPage">Nossos Tratamentos</Text>
@@ -41,7 +42,7 @@ const Services = () => {
           <SerivesSlider />
         )}
 
-        <div className="info_box">
+        <div className="info_box" data-aos="fade-up">
           <Board1 className="board1" />
           {width > 1000 ? (
             <Board2 className="board2" />

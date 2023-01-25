@@ -13,6 +13,7 @@ import Title from "../../../components/common/Title";
 import { Input } from "../../../components/common/Input/style";
 import Logo from "../../../assets/svgs/icons/logoReady.svg";
 import Button from "../../../components/common/Button";
+import { IPages } from "..";
 
 type SocialMediaIconKeys = keyof typeof social_media;
 
@@ -28,7 +29,7 @@ const SocialMediaIcons: SocialMediaIconType = {
   youtube: <FaYoutube />,
 };
 
-const Footer = () => {
+const Footer = ({id,innerRef}: IPages) => {
   const getSocialMediaJSX = (): JSX.Element[] => {
     return Object.entries(social_media).map(
       ([el, id]: [el: string, id: string]) => (
@@ -39,7 +40,7 @@ const Footer = () => {
     );
   };
   return (
-    <FooterStyled>
+    <FooterStyled id={id} ref={innerRef}>
       <Container variant="normal">
         <div className="top_content">
           <div>

@@ -13,11 +13,12 @@ import { ReactComponent as Home } from "../../../assets/svgs/icons/home.svg";
 import { ReactComponent as College } from "../../../assets/svgs/icons/college.svg";
 
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { IPages } from "..";
 
 
-const Patients = () => {
+const Patients = ({id,innerRef}: IPages) => {
   return (
-    <SectionStlyed>
+    <SectionStlyed id={id} ref={innerRef}>
       <div className="title_box">
         <Text variant="labelPage">Nossos casos</Text>
         <Title tag="h3" variant="title3">
@@ -32,7 +33,7 @@ const Patients = () => {
       </div>
 
       <Container variant="normal">
-        <section>
+        <section data-aos="fade-right"> 
           <Title variant="title2" tag="h4">
             Get an Insurance Quote <span>to get started!</span>
           </Title>
@@ -59,7 +60,7 @@ const Patients = () => {
             </li>
           </ul>
         </section>
-        <form action="">
+        <form action="" data-aos="fade-left">
           <h3>Car Insurance</h3>
           <Input variant="patients" placeholder="Enter Name" />
           <Input variant="patients" placeholder="Enter Mail" />

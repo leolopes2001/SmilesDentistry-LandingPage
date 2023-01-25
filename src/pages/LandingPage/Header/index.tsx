@@ -12,17 +12,18 @@ import { useMemo } from "react";
 
 import { ReactComponent as Phone } from "../../../assets/svgs/icons/phone.svg";
 import Points from "../../../assets/svgs/icons/points.svg";
+import { PagesTypes } from "..";
 
-const Header = () => {
-  const [currentNavLink, setCurrentNavLink] = useState("home");
+const Header = ({sectionActive}: {sectionActive: string}) => {
+  // const [currentNavLink, setCurrentNavLink] = useState("home");
   const [isOutOfPosition, setIsOutOfPosition] = useState(false);
 
   const [width] = useWindowSize();
 
-  const handleNavLinkClick = useCallback(
-    (id: string) => setCurrentNavLink(id),
-    []
-  );
+  // const handleNavLinkClick = useCallback(
+  //   (id: string) => setCurrentNavLink(id),
+  //   []
+  // );
 
   const changeBgHeader = useCallback(() => {
     if (window.scrollY > 0) {
@@ -56,10 +57,9 @@ const Header = () => {
             {navLinks.map(({ id, name }) => (
               <Link
                 key={id}
-                href="id"
+                href={id}
                 variant="secondary"
-                className={currentNavLink === id ? "active" : ""}
-                onClick={() => handleNavLinkClick(id)}
+                className={sectionActive === id ? "active" : ""}
               >
                 {name}
               </Link>

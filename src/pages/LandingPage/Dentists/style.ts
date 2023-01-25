@@ -10,7 +10,11 @@ export const SectionStyled = styled.section`
       align-items: center;
       justify-content: space-between;
     }
+    
+    .center{
+      justify-content: space-evenly;
 
+    }
     .header {
       display: flex;
       flex-direction: column-reverse;

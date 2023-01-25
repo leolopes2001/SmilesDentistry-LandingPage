@@ -145,9 +145,9 @@ export const HeaderStyled = styled.header<{ isOut: boolean }>`
       width: 100%;
       align-items: flex-end;
       justify-content: center;
-
+      min-width: 190px;
       height: 100%;
-      gap: 13px;
+      gap: 10px;
       padding-bottom: 17px;
 
       img:nth-of-type(1) {
@@ -189,7 +189,7 @@ export const HeaderStyled = styled.header<{ isOut: boolean }>`
         }
       }
 
-      @media (min-width: 1330px) {
+      @media (min-width: 1250px) {
         display: flex;
       }
       @media (max-height: 750px) and (min-width: 1200px) {
@@ -203,14 +203,22 @@ export const HeaderStyled = styled.header<{ isOut: boolean }>`
       height: 65%;
       background: #2ca2fb;
       font-size: 14px;
+      margin-right: 0.5rem;
+
+      @media (min-width: 1200px) and (max-height: 1000px) and (max-width: 1650px) {
+        min-width: 160px;
+        max-width: 160px;
+        height: 70%;
+      }
     }
 
     @media (max-height: 700px) {
       > ${LinkStyled} {
-        min-width: 180px;
-        max-width: 180px;
-        height: 46px;
-        font-size: 14px;
+        min-width: 165px;
+        max-width: 165px;
+        height: 42px;
+        font-size: 12px;
+        margin-right: 0.5rem;
       }
     }
   }

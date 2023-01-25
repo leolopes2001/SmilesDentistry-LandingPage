@@ -165,9 +165,29 @@ const SliderWrapVariant = {
     .swiper-slide {
       width: 366px;
       height: 302px;
+
       display: flex;
       justify-content: center;
       text-align: center;
+      position: relative;
+      .name {
+        bottom: 50px;
+        left: 50%;
+        width: 400px;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 99999999;
+        color: red;
+        position: absolute;
+
+        font-family: "Archivo";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 22px;
+
+        color: #ffffff;
+      }
       .up,
       .down {
         width: 366px;
@@ -195,6 +215,8 @@ const SliderWrapVariant = {
     .swiper-button-prev {
       display: none;
     }
+
+  
 
     @media (max-height: 780px) {
       .swiper-slide {
@@ -228,6 +250,20 @@ const SliderWrapVariant = {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background: #2ca2fb;
+      opacity: 0.3;
+    }
+
+    .swiper-pagination-bullet-active {
+      width: 12px;
+      height: 12px;
+      opacity: 1;
+      background: #2ca2fb;
     }
 
     .swiper-button-next,

@@ -52,9 +52,10 @@ export const DentistsCardStyled = styled.div`
     width: 100%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 52px;
+   
 
     > div {
-    
+      transition: all 300ms;
       height: 52px;
       width: 100%;
       background: #ffffff;

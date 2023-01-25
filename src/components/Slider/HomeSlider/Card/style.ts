@@ -25,6 +25,10 @@ export const CardStyled = styled.div`
     position: relative;
     z-index: 9999999999;
     text-align: center;
+    max-width: 300px;
+    min-width: 300px;
+    align-self: center;
+    justify-self: center;
 
     span {
       width: 100%;
@@ -32,47 +36,64 @@ export const CardStyled = styled.div`
       position: relative;
       z-index: 999999;
       overflow: visible;
+      min-width: 100%;
     }
     .title_style {
       position: absolute;
       z-index: 999;
       inset: 0;
-      top: 16px;
       object-fit: cover;
-      left: 0;
-      transform: rotate(1deg);
-      transform: translateX(10%);
-      max-width: 270px;
-      min-width: 270px;
-      max-height: 53px;
-      min-height: 53px;
+      left: 1%;
+      transform: translateX(2rem) rotate(2deg);
+      top: 7px;
+      max-width: auto;
+      min-width: auto;
+      width: auto;
+      max-height: 28px;
+      min-height: 28px;
+    }
+
+    @media (min-width: 400px) {
+      max-width: 400px;
+      min-width: 400px;
+
+      .title_style {
+        transform: translateX(1rem) rotate(2deg);
+      }
     }
 
     @media (min-width: 800px) {
       font-size: 40px;
-      span {
-        max-width: 500px;
-      }
-    }
-    @media (min-width: 1000px) {
-      font-size: 50px;
-      span {
-        max-width: 700px;
-      }
-    }
-    @media (min-width: 1200px) {
-      font-size: 60px;
-      span {
-        max-width: 850px;
+      max-width: 500px;
+      min-width: 500px;
+
+      .title_style {
+        top: 10px;
+        max-height: 32px;
+        min-height: 32px;
       }
     }
 
-    @media (max-height: 700px) and (min-width: 1000px) {
+    @media (min-width: 1000px) {
       font-size: 50px;
-      span {
-        max-width: 700px;
+      max-width: 550px;
+      min-width: 550px;
+
+      .title_style {
+        max-height: 40px;
+        min-height: 40px;
       }
-      /* background-color: red; */
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 60px;
+      min-width: 650px;
+
+      .title_style {
+        top: 12px;
+        max-height: 48px;
+        min-height: 48px;
+      }
     }
   }
 
@@ -113,10 +134,6 @@ export const CardStyled = styled.div`
     flex-direction: column;
     transform: translateY(20%);
     align-items: center;
-    /* ${LinkStyled} {
-      width: 200px;
-      height: 40px;
-    } */
 
     ${LinkStyled}:nth-of-type(1) {
       width: 135px;
@@ -156,29 +173,4 @@ export const CardStyled = styled.div`
   @media (min-width: 800px) {
     transform: translateX(-50%) translateY(-25%);
   }
-
-  /* @media (max-height: 700px) {
-    transform: translateX(-50%) translateY(-25%);
-
-    div {
-      gap: 15px;
-    }
-
-    ${BaseTitle} {
-      font-size: 48px;
-
-      .title_style {
-        top: 10px;
-        left: -0.4%;
-
-        max-width: 220px;
-        min-width: 220px;
-        max-height: 43px;
-        min-height: 43px;
-      }
-    }
-    p {
-      margin-bottom: 3%;
-    }
-  }  */
 `;
