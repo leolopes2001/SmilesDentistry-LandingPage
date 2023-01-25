@@ -19,6 +19,7 @@ export default createGlobalStyle`
         position: relative;
         height: -webkit-fill-available;
         min-height: 100vh;
+        overflow-x: hidden;
     }
 
 

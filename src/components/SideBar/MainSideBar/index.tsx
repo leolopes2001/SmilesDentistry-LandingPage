@@ -1,7 +1,6 @@
 import { useSideBar } from "../../../contexts/SideBarProvider";
 import Link from "../../common/Link";
 import { navLinks } from "../../../components-mock.json";
-import { MainSideBarSlyed } from "./style";
 
 import { ReactComponent as Phone } from "../../../assets/svgs/icons/phone.svg";
 import { contact_info } from "../../../components-mock.json";
@@ -17,9 +16,7 @@ const MainSideBar = () => {
     let class_name = "";
 
     if (isSideBarOpen) class_name += "animation";
-console.log(id === sectionActiveSideBar);
-    console.log(id ,sectionActiveSideBar);
-    
+
     if (id === sectionActiveSideBar) {
       class_name += " active";
     }
@@ -28,7 +25,7 @@ console.log(id === sectionActiveSideBar);
   };
 
   return (
-    <MainSideBarSlyed>
+    <div>
       <nav>
         {navLinks.map(({ id, name }) => (
           <Link
@@ -52,7 +49,7 @@ console.log(id === sectionActiveSideBar);
           AGENDAR AGORA
         </Link>
       </div>
-    </MainSideBarSlyed>
+    </div>
   );
 };
 

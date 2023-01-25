@@ -39,14 +39,11 @@ const LandingPage = () => {
   const comoChegarRef = useRef<HTMLElement>(null);
 
   const options = {
-    threshold: [0, 0.5,0.6, 1],
+    threshold: [0, 0.5, 0.6, 1],
   };
 
   const handleObserver = (section: PagesTypes, ratio: number): void => {
-
-    console.log(section,ratio);
-    
-    if (ratio < 0.50) return;
+    if (ratio < 0.5) return;
 
     setSectionActiveSideBar(section);
     setSectionActive(section);

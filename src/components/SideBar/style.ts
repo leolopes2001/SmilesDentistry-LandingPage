@@ -28,17 +28,16 @@ export const SideBarStyled = styled.aside<{
   z-index: 999999999999999999999999999999;
   overflow: hidden;
 
-  > div{
+  > div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 100%;
-    padding: 20% 0;
-    gap: 3rem;
+    /* padding: 5% 0;
+    padding-bottom: 30%; */
   }
   .info_box {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,16 +50,16 @@ export const SideBarStyled = styled.aside<{
       justify-content: center;
       gap: 5px;
 
-      margin-bottom: 1rem;
+      margin-top: 2rem;
 
-      img{
+      img {
         width: 14px;
       }
-      svg{
+      svg {
         transform: scale(0.8);
       }
-      p{
-        font-size: 12px;  
+      p {
+        font-size: 12px;
       }
     }
     ${LinkStyled} {
@@ -75,13 +74,12 @@ export const SideBarStyled = styled.aside<{
   nav {
     gap: 1rem;
     display: flex;
-    height: 100%;
     flex-direction: column;
     justify-content: flex-start;
-   
-
+    margin-top: 2rem;
     a {
       font-size: 12px;
+      color: black;
     }
 
     .animation {
