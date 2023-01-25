@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ButtonStyled } from "../../../components/common/Button/style";
 import { LinkStyled } from "../../../components/common/Link/style";
 import { Text } from "../../../components/common/Text/style";
 import { BaseTitle } from "../../../components/common/Title/style";
@@ -7,7 +8,7 @@ export const SectionStyled = styled.section`
   width: 100%;
 
   padding: 1rem;
-  ${LinkStyled} {
+  ${ButtonStyled} {
     width: 135px;
     height: 48px;
 

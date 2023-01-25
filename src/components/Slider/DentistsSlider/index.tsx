@@ -22,7 +22,7 @@ const DentistsSlider = () => {
   return (
     <Slider variant="type5" settings={settings}>
       {dentists.map(({ id, name, specialization }) => (
-        <Slide>
+        <Slide key={id}>
           <DentistsCard
             id={id as "1" | "2" | "3" | "4"}
             name={name}

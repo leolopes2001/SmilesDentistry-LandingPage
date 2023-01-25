@@ -1,11 +1,11 @@
-import { useCallback, useEffect, useRef } from 'react';
-import { useSideBar } from '../../contexts/SideBarProvider';
-import useWindowSize from '../../hooks/useWindowSize';
-import MainSideBar from './MainSideBar';
-import { Overlay, SideBarStyled } from './style';
+import { useCallback, useEffect, useRef } from "react";
+import { useSideBar } from "../../contexts/SideBarProvider";
+import useWindowSize from "../../hooks/useWindowSize";
+import MainSideBar from "./MainSideBar";
+import { Overlay, SideBarStyled } from "./style";
 
 interface ISideBarProps {
-  variant: 'main_side_bar';
+  variant: "main_side_bar";
 }
 
 interface ISideBarVariant {
@@ -24,8 +24,8 @@ const SideBar = ({ variant }: ISideBarProps) => {
   const handleClick = useCallback((e: MouseEvent) => {
     const target = e.target as HTMLElement;
 
-    if (target.classList.contains('mobile-menu')) return;
-    if (target.classList.contains('line-menu')) return;
+    if (target.classList.contains("mobile-menu")) return;
+    if (target.classList.contains("line-menu")) return;
 
     if (!sideBarRef.current?.contains(target)) {
       setIsSideBarOpen(false);
@@ -33,14 +33,14 @@ const SideBar = ({ variant }: ISideBarProps) => {
   }, []);
 
   const clearDocument = useCallback(() => {
-    document.body.classList.remove('hide-scroll');
-    document.removeEventListener('mousedown', handleClick);
+    document.removeEventListener("mousedown", handleClick);
+    document.querySelector("html")?.classList.remove("hide-scroll")
   }, []);
 
   useEffect(() => {
     if (isSideBarOpen) {
-      document.body.classList.add('hide-scroll');
-      document.addEventListener('mousedown', handleClick);
+      document.querySelector("html")?.classList.add("hide-scroll")
+      document.addEventListener("mousedown", handleClick);
       return;
     }
 

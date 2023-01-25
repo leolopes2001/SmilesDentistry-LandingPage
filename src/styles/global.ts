@@ -22,7 +22,6 @@ export default createGlobalStyle`
     }
 
 
-
     ul,ol{
       list-style: none;
     }
@@ -38,26 +37,9 @@ export default createGlobalStyle`
 
     .hide-scroll{
         overflow: hidden !important;
-    }
 
-    .test{
-     height: 100vh;
-     
-     
     }
+    
 
-    .test3{
-        height: 100vh;
-        width: 100vw;
-        /* background-color: #000E29; */
-        /* opacity: 0.3; */
-        img{
-            object-fit: cover;
-            width: 100vw;   
-           height: 110vh;
-            /* min-height: 90vh; */
-            /* max-height: 95vh; */
-            /* max-width: 100vh; */
-        }
-    }
+
 `;

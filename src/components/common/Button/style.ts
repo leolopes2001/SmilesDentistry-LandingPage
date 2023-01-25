@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import convertToRem from "../../../utils/convertToRem";
 
 const ButtonVariant = {
   default: css``,
@@ -37,13 +38,46 @@ const ButtonVariant = {
     flex: none;
     order: 0;
     flex-grow: 0;
+  `,
+  primary: css`
+    font-family: "Archivo";
+    font-style: normal;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 12px;
+    color: ${({ theme }) => theme.colors.whiteFixed};
+    border-radius: ${convertToRem(91)};
+    line-height: ${convertToRem(64)};
+    text-transform: uppercase;
 
-   
+    @media (min-width: 1000px) {
+      font-size: ${convertToRem(14)};
+    }
+
+    @media (max-height: 700px) {
+      font-size: 14px;
+    }
+
+    transition: filter 300ms;
+    :hover {
+      filter: brightness(1.2);
+    }
   `,
 };
-
+const ColorVariant = {
+  default: css`
+    background-color: transparent;
+  `,
+  primary: css`
+    background-color: ${({ theme }) => theme.colors.primary};
+  `,
+  secondary: css`
+    background-color: ${({ theme }) => theme.colors.secondary};
+  `,
+};
 export const ButtonStyled = styled.button<{
-  variant?: "form_button" | "fotter";
+  variant?: "form_button" | "fotter" | "primary";
+  color: "primary" | "secondary";
 }>`
   display: inline-flex;
   align-items: center;
@@ -60,4 +94,5 @@ export const ButtonStyled = styled.button<{
   }
 
   ${({ variant }) => ButtonVariant[variant || "default"]}
+  ${({ color }) => ColorVariant[color]}
 `;

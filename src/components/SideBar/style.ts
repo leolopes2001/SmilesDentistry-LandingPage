@@ -1,5 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 import convertToRem from "../../utils/convertToRem";
+import { LinkStyled } from "../common/Link/style";
 
 const fade = keyframes`
   from{
@@ -20,20 +21,68 @@ export const SideBarStyled = styled.aside<{
   top: 80px;
   left: 0;
   height: calc(100vh - 80px);
-  width: 50vw;
+  width: 60vw;
   background-color: ${({ theme }) => theme.colors.whiteFixed};
   transform: translateX(-100%);
   transition: transform 0.5s ease-in;
   z-index: 999999999999999999999999999999;
   overflow: hidden;
 
+  > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20% 0;
+    gap: 3rem;
+  }
+  .info_box {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    .contact_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      margin-bottom: 1rem;
+
+      img{
+        width: 14px;
+      }
+      svg{
+        transform: scale(0.8);
+      }
+      p{
+        font-size: 12px;  
+      }
+    }
+    ${LinkStyled} {
+      justify-self: center;
+      align-self: center;
+      height: 48px;
+      width: 135px;
+      font-size: 12px;
+    }
+  }
+
   nav {
+    gap: 1rem;
     display: flex;
     height: 100%;
-    gap: 4rem;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 40%;
+   
+
+    a {
+      font-size: 12px;
+    }
 
     .animation {
       animation: ${fade} 800ms;
@@ -41,8 +90,9 @@ export const SideBarStyled = styled.aside<{
 
     .active {
       font-weight: 800;
-      font-size: ${convertToRem(20)};
+      font-size: ${convertToRem(16)};
       line-height: ${convertToRem(23)};
+      color: ${({ theme }) => theme.colors.primary};
     }
   }
   ${({ isSideBarOpen }) =>
@@ -50,6 +100,13 @@ export const SideBarStyled = styled.aside<{
     css`
       transform: translateX(0);
     `}
+
+  @media (min-width: 550px) {
+    width: 40vw;
+  }
+  @media (min-width: 650px) {
+    width: 30vw;
+  }
 `;
 
 export const Overlay = styled.div<{ isSideBarOpen: boolean }>`
@@ -64,7 +121,7 @@ export const Overlay = styled.div<{ isSideBarOpen: boolean }>`
   ${({ isSideBarOpen }) =>
     isSideBarOpen &&
     css`
-    pointer-events: auto;
+      pointer-events: auto;
       z-index: 100;
       background-color: rgba(0, 0, 0, 0.3);
     `}

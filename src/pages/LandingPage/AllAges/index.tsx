@@ -6,52 +6,52 @@ import { ReactComponent as Man1 } from "../../../assets/svgs/background/man1.svg
 import Man2 from "../../../assets/svgs/background/man2.png";
 import useWindowSize from "../../../hooks/useWindowSize";
 import { IPages } from "..";
+import { useState } from "react";
+import { CardAllAge } from "./CardAllAge";
+import Button from "../../../components/common/Button";
+type AgeTypes = "child" | "adult" | "best_age";
 
-const AllAges = ({id,innerRef}: IPages) => {
-  const [width] = useWindowSize();
+const AllAges = ({ id, innerRef }: IPages) => {
+  const [ageActive, setAgeActive] = useState<AgeTypes>("adult");
+
+  const getAgeJSX = () => {
+    switch (ageActive) {
+      case "child":
+        return <CardAllAge />;
+      case "adult":
+        return <CardAllAge />;
+      case "best_age":
+        return <CardAllAge />;
+    }
+  };
 
   return (
     <SectionStyled id={id} ref={innerRef}>
       <p>Atendimento para todas as idades</p>
       <div className="navigation_box">
-        <Link variant="primary" color="primary">
+        <Button
+          variant="primary"
+          color={ageActive === "child" ? "secondary" : "primary"}
+          onClick={() => setAgeActive("child")}
+        >
           Crianças
-        </Link>
-        <Link variant="primary" color="primary">
+        </Button>
+        <Button
+          variant="primary"
+          color={ageActive === "adult" ? "secondary" : "primary"}
+          onClick={() => setAgeActive("adult")}
+        >
           Adultos
-        </Link>
-        <Link variant="primary" color="primary">
-          Melhor idade
-        </Link>
+        </Button>
+        <Button
+          variant="primary"
+          color={ageActive === "best_age" ? "secondary" : "primary"}
+          onClick={() => setAgeActive("best_age")}
+        >
+          Melhor idade  
+        </Button>
       </div>
-      <div className="content_box">
-        <div className="text_box" data-aos="fade-left">
-          <Text variant="labelPage">Aqui você tem</Text>
-
-          <Title tag="h3" variant="title2">
-            O tratamento que seu <span>dente merece</span>
-          </Title>
-
-          <p>
-            O seu dente merece o melhor tratamento. Aqui na nossa clínica,
-            oferecemos um atendimento personalizado e eficiente para cuidar da
-            sua saúde bucal. contamos com uma equipe altamente qualificada para
-            diagnosticar e tratar todas as condições dentárias. Garantimos um
-            sorriso bonito e saudável para você!
-          </p>
-          <div className="text_link_box">
-            <Link variant="primary" color="primary">
-              Agendar agora
-            </Link>
-            <Link variant="primary" color="secondary">
-              Como Chegar
-            </Link>
-          </div>
-        </div>
-        <div className="img_box" data-aos="fade-right">
-          {width > 1100 ? <img src={Man2} /> : <Man1 />}
-        </div>
-      </div>
+      <div className="content_box">{getAgeJSX()}</div>
     </SectionStyled>
   );
 };

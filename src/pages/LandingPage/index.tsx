@@ -35,15 +35,18 @@ const LandingPage = () => {
   const tratamentosRef = useRef<HTMLElement>(null);
   const dentistasRef = useRef<HTMLElement>(null);
   const pacientesRef = useRef<HTMLElement>(null);
-  const comoChegarRef = useRef<HTMLElement>(null);
   const reviewsRef = useRef<HTMLElement>(null);
+  const comoChegarRef = useRef<HTMLElement>(null);
 
   const options = {
-    threshold: [0, 0.6, 1],
+    threshold: [0, 0.5,0.6, 1],
   };
 
   const handleObserver = (section: PagesTypes, ratio: number): void => {
-    if (ratio < 0.59) return;
+
+    console.log(section,ratio);
+    
+    if (ratio < 0.50) return;
 
     setSectionActiveSideBar(section);
     setSectionActive(section);
