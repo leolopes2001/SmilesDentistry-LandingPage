@@ -8,7 +8,6 @@ import Reviews from "./Reviews";
 import Services from "./Services";
 import "aos/dist/aos.css";
 import { RefObject, useEffect, useRef, useState } from "react";
-import Aos from "aos";
 import { useSideBar } from "../../contexts/SideBarProvider";
 
 export type PagesTypes =
@@ -92,10 +91,6 @@ const LandingPage = () => {
     observerReviews.observe(reviewsRef.current as HTMLElement);
     observerDentistas.observe(dentistasRef.current as HTMLElement);
     observerComoChegar.observe(comoChegarRef.current as HTMLElement);
-  }, []);
-
-  useEffect(() => {
-    Aos.init({ duration: 1500 });
   }, []);
 
   return (
