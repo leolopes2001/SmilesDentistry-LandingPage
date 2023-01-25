@@ -7,7 +7,7 @@ import { BaseTitle } from "../../../components/common/Title/style";
 
 export const SectionStlyed = styled.section`
   margin-top: 5rem;
-
+  overflow: hidden;
   .title_box {
     width: 100%;
     display: flex;
