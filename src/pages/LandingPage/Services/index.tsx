@@ -60,7 +60,7 @@ const Services = ({id,innerRef}: IPages) => {
           </div>
           <div className="link">
             <Points />
-            <Link variant="primary" color="primary">
+            <Link variant="primary" color="primary" target="_blank">
               Agendar agora
             </Link>
           </div>

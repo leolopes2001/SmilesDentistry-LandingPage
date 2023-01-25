@@ -53,10 +53,10 @@ const Dentists = ({id,innerRef}: IPages) => {
         <div className="schedule" data-aos="fade-up">
           <h5>Agende uma avaliação</h5>
           <div>
-            <Link color="primary" variant="primary">
+            <Link color="primary" variant="primary" target="_blank">
               AGENDAR AGORA
             </Link>
-            <Link color="secondary" variant="primary">
+            <Link color="secondary" variant="primary" href="como-chegar">
               COMO CHEGAR
             </Link>
           </div>

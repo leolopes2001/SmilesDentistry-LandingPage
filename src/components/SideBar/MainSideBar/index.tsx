@@ -48,7 +48,7 @@ console.log(id === sectionActiveSideBar);
           <p>{contact_info.phone}</p>
           <img src={Points} alt="Points" />
         </div>
-        <Link color="primary" variant="primary">
+        <Link color="primary" variant="primary" target="_blank">
           AGENDAR AGORA
         </Link>
       </div>

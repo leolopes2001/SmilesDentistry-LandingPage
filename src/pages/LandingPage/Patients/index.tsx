@@ -27,7 +27,7 @@ const Patients = ({id,innerRef}: IPages) => {
       </div>
       <PatientsSlider />
       <div className="link_box">
-        <Link variant="primary" color="primary">
+        <Link variant="primary" color="primary" target="_blank">
           AGENDAR AGORA
         </Link>
       </div>

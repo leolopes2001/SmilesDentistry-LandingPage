@@ -33,7 +33,7 @@ const Footer = ({id,innerRef}: IPages) => {
   const getSocialMediaJSX = (): JSX.Element[] => {
     return Object.entries(social_media).map(
       ([el, id]: [el: string, id: string]) => (
-        <a key={el} href={id} className="social_media_link">
+        <a key={el} href={id} className="social_media_link" target="_blank">
           {SocialMediaIcons[el as SocialMediaIconKeys]}
         </a>
       )

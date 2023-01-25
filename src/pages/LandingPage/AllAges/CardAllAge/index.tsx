@@ -25,10 +25,10 @@ export const CardAllAge = () => {
           sorriso bonito e saudável para você!
         </p>
         <div className="text_link_box">
-          <Link variant="primary" color="primary">
+          <Link variant="primary" color="primary" target="_blank">
             Agendar agora
           </Link>
-          <Link variant="primary" color="secondary">
+          <Link variant="primary" color="secondary" href="como-chegar">
             Como Chegar
           </Link>
         </div>

@@ -12,10 +12,10 @@ const Card = () => {
       </Title>
       <p>Clique para no botão abaixo para agendar uma avaliação</p>
       <div>
-        <Link color="primary" variant="primary">
+        <Link color="primary" variant="primary" target="_blank">
           AGENDAR
         </Link>
-        <Link color="secondary" variant="primary">
+        <Link color="secondary" variant="primary" href="como-chegar">
           COMO CHEGAR
         </Link>
       </div>

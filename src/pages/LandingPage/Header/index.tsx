@@ -63,7 +63,11 @@ const Header = ({ sectionActive }: { sectionActive: string }) => {
             <p>{contact_info.phone}</p>
             <img src={Points} alt="Points" />
           </div>
-          <Link color="primary" variant="primary">
+          <Link
+            color="primary"
+            variant="primary"
+            target="_blank"
+          >
             AGENDAR AGORA
           </Link>
         </Container>

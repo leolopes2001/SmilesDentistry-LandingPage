@@ -126,6 +126,8 @@ const SliderWrapVariant = {
   `,
   type2: css`
     width: 100%;
+    position: relative;
+    z-index: 9999;
     transform: translateY(-10%);
     .swiper {
       margin-top: 0rem 0;

@@ -119,10 +119,10 @@
         "days_of_work": "Segunda a Sábado"
     },
     "social_media": {
-        "facebook": "t",
-        "twitter": "t",
-        "behance": "th",
-        "youtube": "t",
-        "linkedin": "t"
+        "facebook": "https://agendaconsulta.com/",
+        "twitter": "https://agendaconsulta.com/",
+        "behance": "https://agendaconsulta.com/",
+        "youtube": "https://agendaconsulta.com/",
+        "linkedin": "https://agendaconsulta.com/"
     }
 }
