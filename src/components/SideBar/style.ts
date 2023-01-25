@@ -34,8 +34,6 @@ export const SideBarStyled = styled.aside<{
     align-items: center;
     justify-content: flex-start;
     height: 100%;
-    /* padding: 5% 0;
-    padding-bottom: 30%; */
   }
   .info_box {
     display: flex;
@@ -50,7 +48,7 @@ export const SideBarStyled = styled.aside<{
       justify-content: center;
       gap: 5px;
 
-      margin-top: 2rem;
+      margin-top: 4rem;
 
       img {
         width: 14px;
@@ -76,7 +74,7 @@ export const SideBarStyled = styled.aside<{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 2rem;
+    margin-top: 3rem;
     a {
       font-size: 12px;
       color: black;
