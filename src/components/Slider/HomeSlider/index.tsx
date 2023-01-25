@@ -3,7 +3,7 @@ import { Slide, Slider, SliderProps } from "..";
 import Img1 from "../../../assets/svgs/background/family3.jpg";
 import Img2 from "../../../assets/svgs/background/family.jpg";
 import Img3 from "../../../assets/svgs/background/family5.jpg";
-import { useRef } from "react";
+
 import useSwiperRef from "../../../hooks/useSwiperRef";
 
 import { ReactComponent as HomeBtnSlider1 } from "../../../assets/svgs/background/homeBtnSlider1.svg";

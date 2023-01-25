@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Container } from "../../../components/common/Container/style";
 import { LinkStyled } from "../../../components/common/Link/style";
-import { Text } from "../../../components/common/Text/style";
 import { BaseTitle } from "../../../components/common/Title/style";
 
 export const SectionStyled = styled.section`
@@ -15,16 +14,13 @@ export const SectionStyled = styled.section`
     top: -180px;
     object-fit: cover;
     position: absolute;
-    /* bottom: -420px; */
     height: 500px;
     min-height: 350px;
-    /* transform: translateX(40px); */
     transform: scaleX(-1);
     z-index: 999;
     width: 100vw;
     min-width: 100vw;
     pointer-events: none;
-    /* width: 1000px; */
   }
   .boardBottom {
     object-fit: cover;
@@ -32,7 +28,6 @@ export const SectionStyled = styled.section`
     bottom: -150px;
     height: 500px;
     min-height: 350px;
-    /* transform: translateX(40px); */
     transform: scaleX(-1);
     z-index: 999;
     width: 100vw;
@@ -98,8 +93,7 @@ export const SectionStyled = styled.section`
       .board1,
       .board2 {
         position: absolute;
-        /* display: none; */
-
+    
         path {
           fill: ${({ theme }) => theme.colors.primary};
         }
@@ -136,7 +130,7 @@ export const SectionStyled = styled.section`
           font-size: 16px;
           line-height: 64px;
           color: #ffffff;
-          /* width: 100%; */
+          
         }
       
         img {
@@ -186,10 +180,8 @@ export const SectionStyled = styled.section`
         justify-content: space-evenly;
         max-width: 900px;
         height: 151px;
-        /* transform: translateY(-63%); */
       }
       @media (min-width: 1200px) {
-        /* transform: translateY(-90%); */
         max-width: 1000px;
         justify-content: space-evenly;
         padding: 0 1.5rem;

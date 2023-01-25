@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import convertToRem from "../../../utils/convertToRem";
 import MaskTitle from "./maskTitle";
 
 const TitleVariant = {

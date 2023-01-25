@@ -1,5 +1,4 @@
 import { ServiceCardStyled } from "./style";
-import { services } from "../../../../components-mock.json";
 
 import Aparelho from "../../../../assets/svgs/services/aparelho1.svg";
 import Alinhador from "../../../../assets/svgs/services/aparelho.svg";

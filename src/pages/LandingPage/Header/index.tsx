@@ -8,22 +8,14 @@ import Title from "../../../components/common/Title";
 import useWindowSize from "../../../hooks/useWindowSize";
 import MobileMenu from "../../../components/MobileMenu";
 import { useEffect } from "react";
-import { useMemo } from "react";
 
 import { ReactComponent as Phone } from "../../../assets/svgs/icons/phone.svg";
 import Points from "../../../assets/svgs/icons/points.svg";
-import { PagesTypes } from "..";
 
-const Header = ({sectionActive}: {sectionActive: string}) => {
-  // const [currentNavLink, setCurrentNavLink] = useState("home");
+const Header = ({ sectionActive }: { sectionActive: string }) => {
   const [isOutOfPosition, setIsOutOfPosition] = useState(false);
 
   const [width] = useWindowSize();
-
-  // const handleNavLinkClick = useCallback(
-  //   (id: string) => setCurrentNavLink(id),
-  //   []
-  // );
 
   const changeBgHeader = useCallback(() => {
     if (window.scrollY > 0) {

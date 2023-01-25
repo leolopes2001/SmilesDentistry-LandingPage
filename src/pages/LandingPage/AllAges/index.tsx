@@ -1,10 +1,4 @@
-import Link from "../../../components/common/Link";
-import { Text } from "../../../components/common/Text/style";
-import Title from "../../../components/common/Title";
 import { SectionStyled } from "./style";
-import { ReactComponent as Man1 } from "../../../assets/svgs/background/man1.svg";
-import Man2 from "../../../assets/svgs/background/man2.png";
-import useWindowSize from "../../../hooks/useWindowSize";
 import { IPages } from "..";
 import { useState } from "react";
 import { CardAllAge } from "./CardAllAge";

@@ -93,7 +93,7 @@ const Footer = ({id,innerRef}: IPages) => {
             <h6>News Latter</h6>
             <div className="submit_box">
               <Input placeholder="Email" variant="fotter" type="email" />
-              <Button variant="fotter" type="submit">
+              <Button color="primary" variant="fotter" type="submit">
                 Subscribe
               </Button>
             </div>

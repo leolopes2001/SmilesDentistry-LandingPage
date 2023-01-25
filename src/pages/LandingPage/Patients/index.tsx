@@ -66,7 +66,7 @@ const Patients = ({id,innerRef}: IPages) => {
           <Input variant="patients" placeholder="Enter Mail" />
           <Input variant="patients" placeholder="Car Insurance" />
           <textarea placeholder="Enter Message"></textarea>
-          <Button variant="form_button" type="submit">
+          <Button color="secondary" variant="form_button" type="submit">
             Get a quote now
           </Button>
         </form>

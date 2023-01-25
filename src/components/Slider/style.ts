@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { Container } from "../common/Container/style";
 
 const SliderWrapVariant = {
   type1: css`

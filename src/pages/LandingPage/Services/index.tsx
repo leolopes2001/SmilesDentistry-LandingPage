@@ -1,4 +1,3 @@
-
 import { Container } from "../../../components/common/Container/style";
 import Link from "../../../components/common/Link";
 import { Text } from "../../../components/common/Text/style";
@@ -19,6 +18,7 @@ import Back from "../../../assets/svgs/background/serviceTop.svg";
 import Back2 from "../../../assets/svgs/background/borderBottom.svg";
 import {contact_info} from "../../../components-mock.json"
 import { IPages } from "..";
+
 const Services = ({id,innerRef}: IPages) => {
   const [width] = useWindowSize();
 
