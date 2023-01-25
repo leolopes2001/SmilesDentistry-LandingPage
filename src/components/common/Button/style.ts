@@ -77,7 +77,7 @@ const ColorVariant = {
 };
 export const ButtonStyled = styled.button<{
   variant?: "form_button" | "fotter" | "primary";
-  color: "primary" | "secondary";
+  color?: "primary" | "secondary";
 }>`
   display: inline-flex;
   align-items: center;
@@ -94,5 +94,5 @@ export const ButtonStyled = styled.button<{
   }
 
   ${({ variant }) => ButtonVariant[variant || "default"]}
-  ${({ color }) => ColorVariant[color]}
+  ${({ color }) => ColorVariant[color || "default"]}
 `;

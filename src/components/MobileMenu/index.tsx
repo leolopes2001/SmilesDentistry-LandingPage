@@ -2,7 +2,6 @@ import { useCallback } from "react";
 import { useSideBar } from "../../contexts/SideBarProvider";
 import { MobileMenuStyled } from "./style";
 
-
 const MobileMenu = () => {
   const { isSideBarOpen, setIsSideBarOpen } = useSideBar();
 
@@ -23,4 +22,4 @@ const MobileMenu = () => {
   );
 };
 
-export default MobileMenu
+export default MobileMenu;
