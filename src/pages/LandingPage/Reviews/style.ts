@@ -5,8 +5,10 @@ import { BaseTitle } from "../../../components/common/Title/style";
 
 export const SectionStlyed = styled.section`
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
+  /* max-width: 100vw; */
   position: relative;
+  /* overflow: hidden; */
   > div {
     position: absolute;
   }
@@ -22,7 +24,9 @@ export const SectionStlyed = styled.section`
 
   > img {
     object-fit: cover;
-    width: 100vw;
+    /* width: 100vw; */
+    width: 100%;
+    
     height: 100vh;
     position: relative;
     z-index: -1;

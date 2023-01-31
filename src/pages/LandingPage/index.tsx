@@ -48,61 +48,61 @@ const LandingPage = () => {
     setSectionActive(section);
   };
 
-  useEffect(() => {
-    const observerHome = new IntersectionObserver(
-      (entries) => handleObserver("home", entries[0].intersectionRatio),
-      options
-    );
+  // useEffect(() => {
+  //   const observerHome = new IntersectionObserver(
+  //     (entries) => handleObserver("home", entries[0].intersectionRatio),
+  //     options
+  //   );
 
-    const obeserverTodasIdades = new IntersectionObserver(
-      (entries) => handleObserver("home", entries[0].intersectionRatio),
-      options
-    );
+  //   const obeserverTodasIdades = new IntersectionObserver(
+  //     (entries) => handleObserver("home", entries[0].intersectionRatio),
+  //     options
+  //   );
 
-    const observerTratamentos = new IntersectionObserver(
-      (entries) => handleObserver("tratamentos", entries[0].intersectionRatio),
-      options
-    );
+  //   const observerTratamentos = new IntersectionObserver(
+  //     (entries) => handleObserver("tratamentos", entries[0].intersectionRatio),
+  //     options
+  //   );
 
-    const observerPacientes = new IntersectionObserver(
-      (entries) => handleObserver("agendamentos", entries[0].intersectionRatio),
-      options
-    );
+  //   const observerPacientes = new IntersectionObserver(
+  //     (entries) => handleObserver("agendamentos", entries[0].intersectionRatio),
+  //     options
+  //   );
 
-    const observerReviews = new IntersectionObserver(
-      (entries) => handleObserver("agendamentos", entries[0].intersectionRatio),
-      options
-    );
+  //   const observerReviews = new IntersectionObserver(
+  //     (entries) => handleObserver("agendamentos", entries[0].intersectionRatio),
+  //     options
+  //   );
 
-    const observerDentistas = new IntersectionObserver(
-      (entries) => handleObserver("dentistas", entries[0].intersectionRatio),
-      options
-    );
+  //   const observerDentistas = new IntersectionObserver(
+  //     (entries) => handleObserver("dentistas", entries[0].intersectionRatio),
+  //     options
+  //   );
 
-    const observerComoChegar = new IntersectionObserver(
-      (entries) => handleObserver("como-chegar", entries[0].intersectionRatio),
-      options
-    );
+  //   const observerComoChegar = new IntersectionObserver(
+  //     (entries) => handleObserver("como-chegar", entries[0].intersectionRatio),
+  //     options
+  //   );
 
-    observerHome.observe(homeRef.current as HTMLElement);
-    obeserverTodasIdades.observe(todasIdadesRef.current as HTMLElement);
-    observerTratamentos.observe(tratamentosRef.current as HTMLElement);
-    observerPacientes.observe(pacientesRef.current as HTMLElement);
-    observerReviews.observe(reviewsRef.current as HTMLElement);
-    observerDentistas.observe(dentistasRef.current as HTMLElement);
-    observerComoChegar.observe(comoChegarRef.current as HTMLElement);
-  }, []);
+  //   observerHome.observe(homeRef.current as HTMLElement);
+  //   obeserverTodasIdades.observe(todasIdadesRef.current as HTMLElement);
+  //   observerTratamentos.observe(tratamentosRef.current as HTMLElement);
+  //   observerPacientes.observe(pacientesRef.current as HTMLElement);
+  //   observerReviews.observe(reviewsRef.current as HTMLElement);
+  //   observerDentistas.observe(dentistasRef.current as HTMLElement);
+  //   observerComoChegar.observe(comoChegarRef.current as HTMLElement);
+  // }, []);
 
   return (
     <>
       <Header sectionActive={sectionActive} />
       <Home id="home" innerRef={homeRef} />
       <AllAges id="todasIdades" innerRef={todasIdadesRef} />
-      <Services id="tratamentos" innerRef={tratamentosRef} />
+      <Services id="tratamentos" innerRef={tratamentosRef} /> 
       <Patients id="agendamentos" innerRef={pacientesRef} />
-      <Reviews id="reviews" innerRef={reviewsRef} />
+      <Reviews id="reviews" innerRef={reviewsRef} />  
       <Dentists id="dentistas" innerRef={dentistasRef} />
-      <Footer id="como-chegar" innerRef={comoChegarRef} />
+      <Footer id="como-chegar" innerRef={comoChegarRef} /> 
     </>
   );
 };

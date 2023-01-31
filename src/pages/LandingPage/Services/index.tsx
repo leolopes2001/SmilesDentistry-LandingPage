@@ -66,7 +66,7 @@ const Services = ({id,innerRef}: IPages) => {
           </div>
         </div>
         <img src={Back2} alt="" className="boardBottom" />
-        <img src={Back} alt="Background" className="boardTop" />
+        <img src={Back} alt="Background" className="boardTop" /> 
       </Container>
     </SectionStyled>
   );

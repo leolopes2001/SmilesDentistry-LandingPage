@@ -30,7 +30,7 @@ export const SectionStyled = styled.section`
     min-height: 350px;
     transform: scaleX(-1);
     z-index: 999;
-    width: 100vw;
+    width: 100%;
     min-width: 100vw;
     pointer-events: none;
   }

@@ -18,9 +18,9 @@ const Reviews = ({id,innerRef}: IPages) => {
 
       <Container variant="normal">
         <ReviewSlider/>
-      </Container>
+      </Container> 
 
-      <img src={Background} alt="Background" />
+      <img src={Background} alt="Background" /> 
     </SectionStlyed>
   );
 };
